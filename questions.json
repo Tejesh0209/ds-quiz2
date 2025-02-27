@@ -1,0 +1,1189 @@
+{
+  "questions": [
+    {
+      "question": "According to the slide Mathematical Foundations for Data Science for Engineers I, what is the definition of an Eigenvector?",
+      "options": {
+        "A": "An eigenvector is a vector that changes its direction and magnitude when a matrix is applied to it.",
+        "B": "An eigenvector is a non-zero vector that maintains its direction but may be scaled when a matrix is applied to it.",
+        "C": "An eigenvector is a vector that remains entirely unchanged when a matrix is applied to it.",
+        "D": "An eigenvector is any vector that solves the determinant equation of the matrix.",
+        "E": "An eigenvector is a vector that exists only for symmetric matrices."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "What is a five-number summary used in boxplot analysis?",
+      "options": {
+        "A": "Mean, Median, Mode, Variance, Standard Deviation",
+        "B": "Minimum, Q1, Median, Q3, Maximum",
+        "C": "Minimum, Q1, Mean, Q3, Maximum",
+        "D": "Q1, Median, Q3, IQR, Outliers",
+        "E": "Range, Variance, Standard Deviation, IQR, Mean"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "After partitioning into equal-frequency bins, which of the following represents smoothing by bin means?",
+      "options": {
+        "A": "Bin 1: 9, 9, 9, 9 | Bin 2: 23, 23, 23, 23 | Bin 3: 29, 29, 29, 29",
+        "B": "Bin 1: 4, 4, 4, 15 | Bin 2: 21, 21, 25, 25 | Bin 3: 26, 26, 26, 34",
+        "C": "Bin 1: 4, 8, 9, 15 | Bin 2: 21, 21, 24, 25 | Bin 3: 26, 28, 29, 34",
+        "D": "Bin 1: 34, 29, 4, 8 | Bin 2: 28, 26, 9, 15 | Bin 3: 25, 24, 21, 21"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on attribute types in Data Exploration, which of the following best describes an ordinal attribute?",
+      "options": {
+        "A": "A categorical attribute with distinct labels but no meaningful order, such as hair color.",
+        "B": "A numeric attribute with real values that can be measured continuously, such as temperature.",
+        "C": "A categorical attribute with a meaningful order but without a known magnitude between successive values, such as rankings.",
+        "D": "A binary attribute with only two states, such as positive and negative test results.",
+        "E": "A special type of numeric attribute that always follows a normal distribution."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "question": "In the context of data attribute types, which of the following statements best describes a key difference between interval-scaled and ratio-scaled attributes?",
+      "options": {
+        "A": "Ratio-scaled attributes have a true zero point, allowing meaningful multiplicative comparisons, whereas interval-scaled attributes do not.",
+        "B": "Interval-scaled attributes are always discrete, while ratio-scaled attributes are always continuous.",
+        "C": "Interval-scaled attributes can only be used in qualitative analysis, whereas ratio-scaled attributes are used in quantitative analysis."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to data-wrangling lecture, which of the following best describes an example of noisy data?",
+      "options": {
+        "A": "A recorded salary value of “−10” due to an input error.",
+        "B": "A missing occupation field in a dataset.",
+        "C": "An individual’s age listed as “42” but their birthday as “03/07/2010.”",
+        "D": "A dataset where January 1 is listed as everyone’s birthday.",
+        "E": "A rating system that previously used numbers (1, 2, 3) but now uses letters (A, B, C)."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "On slide 30 on the data exploration pdf, which statistical description of data is NOT included on the list?",
+      "options": {
+        "A": "Identification.",
+        "B": "Data Dispersion characteristics.",
+        "C": "Motivation.",
+        "D": "Measuring the central tendencies."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "Scenario: A streaming platform ingests terabytes of user clickstream data daily. The data includes unstructured text (user comments), semi-structured JSON logs (user interactions), and structured metadata (user IDs). The team wants to minimize latency during ingestion but needs flexibility to analyze evolving data formats later. Question: Which schema strategy is MOST appropriate?",
+      "options": {
+        "A": "Schema-on-Read using a SerDe (Serializer/Deserializer).",
+        "B": "Schema-on-Write with ACID compliance.",
+        "C": "Schema-on-Write using relational databases.",
+        "D": "Schema-on-Read with manual query-specific schema definition.",
+        "E": "Schema-never with raw text storage."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "In the code snippet from the data exploration (for the unstructured data) where the function fetchdata is used to retrieve weather data, the following lines appear: rawtemps = fetchdata('https://api.weather.gov/gridpoints/LOX/155,38')['properties']['temperature']['values']; df = pd.read_json(io.StringIO(json.dumps(rawtemps))); What is the primary purpose of using io.StringIO with json.dumps(rawtemps) before calling pd.read_json?",
+      "options": {
+        "A": "It converts the Python data (often a list or dictionary) into a JSON-formatted string and wraps it as a file-like object so that pd.read_json can parse it.",
+        "B": "It compresses the raw JSON data to reduce memory usage when loading it into the DataFrame.",
+        "C": "It automatically validates the JSON format to ensure there are no syntax errors before reading.",
+        "D": "It converts the JSON data directly into CSV format before importing it into the DataFrame.",
+        "E": "It enables real-time streaming of data by mimicking a network file interface for pd.read_json."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on Data Exploration, consider the following scenario and answer the question. A boxplot is used by a store manager in analyzing the monthly sales performance of a product and observes the following characteristics in the plot: There are several data points above Q3 marked as outliers. The upper whisker is significantly longer than the lower, extending far beyond Q3. The median is positioned closer to the Q1, rather than in the center. What does these observations suggest about the distribution of sales data?",
+      "options": {
+        "A": "The data is positively skewed, indicating that some months have unusually high sales.",
+        "B": "The data is normally distributed as the median is within the IQR.",
+        "C": "The presence of outliers shows that the dataset is unreliable and cannot be analyzed.",
+        "D": "The data is negatively skewed, indicating that most of the months had high sales, but few have extremely low sales.",
+        "E": "The boxplot do not provide any information to determine the distribution."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the data exploration lecture, what is the primary reason for detecting and handling missing data during the data preparation phase?",
+      "options": {
+        "A": "To ensure the accuracy and reliability of statistical analyses and machine learning models.",
+        "B": "To reduce the file size of the dataset for faster processing.",
+        "C": "To improve data visualization aesthetics by eliminating blank spaces.",
+        "D": "To automatically generate new data to replace the missing values without validation.",
+        "E": "To make the dataset look more professional in presentations."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the data exploration lecture on attributes, which of the following best describes a ratio-scaled attribute?",
+      "options": {
+        "A": "Values have a meaningful order, but the magnitude between successive values is unknown.",
+        "B": "Values are categories, states, or names of things with no inherent order.",
+        "C": "Values are measured on a scale with equal-sized units and have a true zero-point.",
+        "D": "Values are measured on a scale of equal-sized units but lack a true zero-point."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "question": "According to lecture slides on data exploration, which of the following is true regarding 'schema on write' and 'schema on read' in data management?",
+      "options": {
+        "A": "'Schema on write' enforces a predefined schema before data is stored, while 'schema on read' applies the schema when data is queried.",
+        "B": "'Schema on read' requires data to be structured before storage, while 'schema on write' allows flexible data storage.",
+        "C": "'Schema on write' is only used in NoSQL databases, whereas 'schema on read' is exclusive to relational databases.",
+        "D": "'Schema on write' enables real-time analytics, while 'schema on read' is only useful for batch processing.",
+        "E": "'Schema on read' means you must manually write schemas every time you access data, making it impractical for real-world use."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "What is the primary purpose of data transformation during the data exploration phase?",
+      "options": {
+        "A": "To clean the data",
+        "B": "To change the scale or format of data for analysis",
+        "C": "To split the dataset into training and test sets",
+        "D": "To train machine learning models"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "According to Data Exploration lecture and readings, what is the main difference between a Quantile Plot and a Q-Q Plot (Quantile-Quantile Plot)?",
+      "options": {
+        "A": "A Quantile Plot displays a single dataset's distribution, while a Q-Q Plot compares quantiles between two different distributions.",
+        "B": "A Quantile Plot uses f-values on the x-axis, while a Q-Q Plot uses raw data values on both axes.",
+        "C": "A Quantile Plot shows summary statistics, while a Q-Q Plot shows all data points.",
+        "D": "A Quantile Plot removes outliers, while a Q-Q Plot includes them.",
+        "E": "A Quantile Plot transforms data to normal distribution, while a Q-Q Plot maintains original values."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture and slides on 2/7 (data-wrangling-part1), which of the following is never part of the data cleaning process?",
+      "options": {
+        "A": "Data integration",
+        "B": "Data discrepancy detection using rules",
+        "C": "Outlier detection",
+        "D": "Data smoothing",
+        "E": "Iteration"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to lecture material on database design paradigms, which approach requires defining data structure constraints before storing information in a database?",
+      "options": {
+        "A": "Schema-on-Write",
+        "B": "Relational Model",
+        "C": "Semi-structured Data Model",
+        "D": "Schema-on-Read",
+        "E": "Puppy-Driven Data Modeling"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "When comparing the unit prices of products sold at two branches, which plot is most suitable?",
+      "options": {
+        "A": "Quantile-Quantile (Q-Q) Plot",
+        "B": "Bar Chart",
+        "C": "Pie Chart",
+        "D": "Histogram"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on data exploration, why might modern data-intensive organizations prefer a schema-on-read approach instead of schema-on-write when managing rapidly evolving datasets?",
+      "options": {
+        "A": "Schema-on-read enables data ingestion without transformation, supporting agile decision-making when new data types emerge.",
+        "B": "Schema-on-read enforces strict governance during data collection, ensuring higher data quality.",
+        "C": "Schema-on-read accelerates query performance by preloading metadata definitions.",
+        "D": "Schema-on-write simplifies the integration of social network data with relational systems by delaying schema creation.",
+        "E": "Schema-on-read allows only structured data to be stored efficiently."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to Data Exploration lecture and readings, what is the main purpose of a Quantile Plot in data analysis?",
+      "options": {
+        "A": "To display all data points, allowing users to assess overall distribution and detect unusual occurrences.",
+        "B": "To compare two different datasets by plotting their quantiles against each other.",
+        "C": "To summarize data using only the five-number summary (minimum, Q1, median, Q3, maximum).",
+        "D": "To transform skewed data into a normal distribution for statistical analysis.",
+        "E": "To remove extreme values from a dataset before further analysis."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lectures on data exploration, which of the following does NOT describe the attribute of height, as measured in whole inches?",
+      "options": {
+        "A": "Ordinal.",
+        "B": "Discrete.",
+        "C": "Quantitative.",
+        "D": "Ratio-scaled.",
+        "E": "Numeric."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to lecture, what is the significance of whiskers in a boxplot?",
+      "options": {
+        "A": "They extend to the minimum and maximum values within a defined range.",
+        "B": "They always extend to the absolute minimum and maximum values in the dataset.",
+        "C": "They represent the mean and standard deviation.",
+        "D": "They show only the outliers in a dataset.",
+        "E": "They are purely decorative and have no statistical meaning."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the Data Exploration lecture and as seen in the slides, what percentage of the data is within 2 standard deviations of the mean in a normal distribution curve?",
+      "options": {
+        "A": "95%",
+        "B": "96%",
+        "C": "68%",
+        "D": "99.7%",
+        "E": "92%"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture material on multimodal data sources, when analyzing the FIFA World Cup dataset that contains Twitter data (~5M tweets), News & Blogs (776 posts), and YouTube content (460 minutes), which exploratory data analysis approach would be most appropriate?",
+      "options": {
+        "A": "A combined analysis that first categorizes data by structure type (structured vs unstructured), processes text data from tweets and blogs separately from video content, and applies schema-on-read for the unstructured components.",
+        "B": "Analyzing only the Twitter data since it has the largest volume (5M tweets).",
+        "C": "Converting all data sources into a single relational database table.",
+        "D": "Applying schema-on-write to all data sources immediately."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the data exploration demo, let's say we got the data from everyday sales at the Starbucks. At Starbucks, there are databases that contain the data on orders, order contents, customers. The Orders table has the attributes Order ID (unique identifier type (int) , Customer ID (Foreign key to customer database), Date, time, Order contents (foreign key to Order content database). The Order contents database has the attributes Order ID (unique identifier as well as foreign key to Orders table, Drink (string), syrups (string), Diary Milk (string) , Espresso shots (int), hot/cold (string). The customers database mentioned above contains the attributes Customer ID (unique identifier type int), email, Starbucks points, orders (list of order ids of type int[]). Write an SQL query to extract the number of orders that were made today (07/02/2025) before 3 pm, that involved macchiato (Drink) with caramel (syrups).",
+      "options": {
+        "A": "SELECT COUNT(*) AS NumberOfOrders FROM Orders o JOIN OrderContents oc ON o.OrderContents = oc.OrderID WHERE o.Date = '2025-02-07' AND o.Time < '15:00:00' AND oc.DrinkType = 'Macchiato' AND oc.Syrups = 'Caramel';",
+        "B": "SELECT COUNT(*) AS NumberOfOrders FROM Orders o JOIN OrderContents oc ON o.OrderContents = oc.OrderID WHERE o.Date = '2025-02-07' AND o.Time > '15:00:00' AND oc.DrinkType = 'Macchiato' AND oc.Syrups = 'Caramel';",
+        "C": "SELECT COUNT(*) AS NumberOfOrders FROM Orders o JOIN Customers c ON o.CustomerID = c.CustomerID WHERE o.Date = '2025-02-07' AND o.Time < '15:00:00';",
+        "D": "SELECT COUNT(*) AS NumberOfOrders FROM Customers c JOIN Orders o ON c.CustomerID = o.CustomerID WHERE o.Date = '2025-02-07' AND oc.DrinkType = 'Macchiato' AND oc.Syrups = 'Caramel';"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on data exploration techniques, which of the following best describes the primary purpose of using a parallel coordinate plot in data visualization?",
+      "options": {
+        "A": "To visualize relationships and patterns across multiple variables simultaneously.",
+        "B": "To show the distribution of a single continuous variable.",
+        "C": "To compare categorical data using bars of different heights.",
+        "D": "To display the correlation between exactly two variables.",
+        "E": "To represent time-series data with connected points."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the data-exploration lecture, which of the following statements best describes the differences between schema-on-write and schema-on-read approaches in data management?",
+      "options": {
+        "A": "Schema-on-read allows for more flexibility by deferring schema application until data is read, while schema-on-write requires a predefined structure before data can be loaded, resulting in faster read times but less agility.",
+        "B": "Schema-on-write provides more flexibility than schema-on-read by allowing data to be loaded without a predefined structure.",
+        "C": "Schema-on-read is only applicable to structured data formats like relational databases, while schema-on-write is used for semi-structured data like XML.",
+        "D": "Schema-on-write and schema-on-read are interchangeable terms referring to the same data loading approach in traditional databases.",
+        "E": "Schema-on-read requires data transformation before loading, while schema-on-write allows data to be copied directly to the file store without transformation."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "In the context of data visualization, which of the following best describes the key difference between a histogram and a bar chart?",
+      "options": {
+        "A": "A histogram represents categorical data, whereas a bar chart represents numerical data.",
+        "B": "A histogram groups data into bins to show distribution, while a bar chart compares distinct categories.",
+        "C": "A bar chart always has bars touching each other, whereas a histogram never does.",
+        "D": "A histogram requires an equal number of values in each bin, while a bar chart does not.",
+        "E": "A bar chart is only used for time-series data, while a histogram is used for all types of data."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "According to the data exploration lecture (slides 47-53), there are several commonly used plot types. Suppose you have the following data: Units Sold: 1, 10, 50, 200, 1000, 25000; Revenue ($): 50, 35000000, 450, 50000, 20, 1. Without additional manipulation, which plot would be best to visualize the relationship between units sold and revenue?",
+      "options": {
+        "A": "Log-Log Plot",
+        "B": "Line Plot (Linear Scale)",
+        "C": "Histogram",
+        "D": "Bar Plot",
+        "E": "Kernel Density Estimation"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "Consider the following three data measurements and determine their appropriate attribute types: Statement 1: The daily count of visitors at a museum; Statement 2: The movie ratings from 1 to 5 stars; Statement 3: The temperature readings in Celsius throughout a day.",
+      "options": {
+        "A": "Statement 1: Discrete, Ratio, Quantitative; Statement 2: Discrete, Ordinal, Quantitative; Statement 3: Continuous, Interval, Quantitative.",
+        "B": "Statement 1: Continuous, Ratio, Quantitative; Statement 2: Continuous, Ordinal, Qualitative; Statement 3: Discrete, Interval, Quantitative.",
+        "C": "Statement 1: Discrete, Nominal, Quantitative; Statement 2: Discrete, Interval, Quantitative; Statement 3: Continuous, Ratio, Quantitative.",
+        "D": "Statement 1: Continuous, Ratio, Qualitative; Statement 2: Continuous, Ordinal, Quantitative; Statement 3: Discrete, Interval, Qualitative.",
+        "E": "Statement 1: Discrete, Ordinal, Qualitative; Statement 2: Continuous, Nominal, Qualitative; Statement 3: Continuous, Ratio, Quantitative."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "In the Data Exploration Demo, a retail dataset was analyzed to understand customer spending patterns. One key variable, InvoiceTotal, represents the amount a customer spent on each transaction. To explore this variable, analysts used two different visualizations: A box plot, which quickly shows important summary details like the median, the upper and lower quartiles, and any outliers; A histogram, which illustrates how frequently different ranges of InvoiceTotal values occur, revealing the overall shape and spread of the data. What is the main advantage of using both a box plot and a histogram together when analyzing the distribution of InvoiceTotal?",
+      "options": {
+        "A": "They provide complementary insights: the box plot shows key summary statistics and outliers, while the histogram displays the full distribution of values, including the data’s shape and frequency.",
+        "B": "They both show the exact same information, which makes it easier to verify the data twice.",
+        "C": "They automatically clean and normalize the data, making it ready for further analysis without extra work.",
+        "D": "They transform the data into a format that can be directly used in machine learning models without additional processing.",
+        "E": "They combine numerical data with descriptive text, offering a full narrative of the dataset in one view."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the data visualization part in the data exploration pdf, which of the following best explains why exploratory data analysis can never be truly objective, no matter how rigorously performed?",
+      "options": {
+        "A": "Data collection methods are universally standardized, ensuring objectivity.",
+        "B": "Data visualization eliminates all subjectivity by presenting facts as they are.",
+        "C": "The questions asked during exploration inherently shape the results and interpretations.",
+        "D": "A truly objective dataset would render EDA obsolete.",
+        "E": "Objectivity in data analysis is guaranteed if the dataset is large enough."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "question": "According to lecture about data wrangling, which of the following is NOT a common technique used for data smoothing in the data transformation process?",
+      "options": {
+        "A": "One-hot encoding.",
+        "B": "Binning.",
+        "C": "Regression.",
+        "D": "Clustering."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "From chapter 2 of our textbook, 'Data Mining Concepts and Techniques,' which of the following statements about data preprocessing is false?",
+      "options": {
+        "A": "Data transformation via sampling and compression create reduced representations while preserving all statistical properties and complete information content.",
+        "B": "Data quality includes accuracy, completeness, consistency, timeliness, believability, and interpretability, evaluated based on intended data use.",
+        "C": "Data integration combines multiple sources into a coherent store, addressing metadata and tuple duplication.",
+        "D": "Data cleaning is an iterative process of discrepancy detection and transformation, handling missing values, noise, outliers, and inconsistencies."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to lecture and the slides, are discrete attributes always numbers?",
+      "options": {
+        "A": "No, because other data types can have an cardinality.",
+        "B": "Yes, because discrete attributes must always be numeric.",
+        "C": "Yes, because all discrete attributes represent countable values.",
+        "D": "No, because discrete attributes can only be strings or text.",
+        "E": "Yes, because discrete attributes are used for analysis, and numbers are easier to analyze."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the data exploration demo, assume we are given a table called movies with columns (title, director, genre, box office record), which SQL query tells us the genres that have more than 100 movies that have achieved a box office record of $500,000 or more?",
+      "options": {
+        "A": "SELECT genre, count(*) FROM movies WHERE boxofficerecord >= 500000 GROUP BY genre HAVING count(*) > 100",
+        "B": "SELECT genre, count(*) FROM movies GROUP BY genre HAVING count(*) > 100",
+        "C": "SELECT genre, count(*) FROM movies WHERE boxofficerecord >= 500000",
+        "D": "SELECT title, count (*) FROM movies WHERE boxofficerecord >= 500000 GROUP BY title HAVING count(*) > 100",
+        "E": "SELECT genre, count(*) FROM movies GROUP BY genre HAVING count(*) > 100 WHERE boxofficerecord >= 500000"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "Which of the following best describes a data object in the context of data science?",
+      "options": {
+        "A": "A representation of an entity that consists of multiple attributes.",
+        "B": "A single attribute that defines the characteristics of an entity.",
+        "C": "A unique identifier used to differentiate records in a database.",
+        "D": "A temporary dataset that is used only for intermediate calculations.",
+        "E": "A special type of binary data structure used for machine learning models."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "In the data exploration files, SQL queries were used to retrieve structured data from a normalized relational database (chinook.db), while Pandas was used to preprocess numerical weather data by transforming temperature values. Considering these two approaches, how does normalization in databases (SQLite queries) differ from normalization in data preprocessing (Pandas transformations)?",
+      "options": {
+        "A": "Database normalization (SQLite queries) structures data to reduce redundancy, while data preprocessing normalization (Pandas transformations) scales numerical values for consistency.",
+        "B": "Both types of normalization serve the same purpose: organizing data into structured tables for storage efficiency.",
+        "C": "Normalization in SQL databases is performed using Min-Max scaling and Z-score normalization techniques.",
+        "D": "Data normalization in Pandas is primarily used to reduce database size and improve storage efficiency.",
+        "E": "In both databases and data preprocessing, normalization refers exclusively to handling missing values to improve data quality."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to lecture data exploration demo, when using Python to interact with a database, the cursor.execute method is commonly used to execute SQL queries or commands. Which of the following statements correctly describes the usage of cursor.execute?",
+      "options": {
+        "A": "cursor.execute returns a database connection object.",
+        "B": "cursor.execute is used to close the database connection.",
+        "C": "cursor.execute takes an SQL query as an argument and executes it.",
+        "D": "cursor.execute is used to create new database tables."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "question": "According to the lecture materials, what is the purpose of a jitter plot?",
+      "options": {
+        "A": "To visually represent overlapping data points, particularly in scatter plots, by introducing random noise to their positions.",
+        "B": "To display the density of continuous data by plotting a smooth curve that estimates the probability density function.",
+        "C": "To show the distribution of data by dividing it into intervals and displaying the frequency of data points in each interval as bars.",
+        "D": "To visualize the relationship between two categorical variables using a table that displays the frequency of each combination of categories.",
+        "E": "To compare the distributions of multiple datasets by plotting their quantiles against each other."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the 'Data Wrangling.pdf,' which of the following is an example of an outlier detection method?",
+      "options": {
+        "A": "Data normalization",
+        "B": "Interquartile Range (IQR)",
+        "C": "Data integration",
+        "D": "Concept hierarchy generation",
+        "E": "Data compression"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "According to the 'Data Exploration Demo Lab,' why might a script remove the time zone information from the validTime and datetime columns when working with time-based data in pandas?",
+      "options": {
+        "A": "Pandas cannot process time zone-aware timestamps in DataFrames.",
+        "B": "To ensure consistency when performing time-based comparisons and calculations.",
+        "C": "To automatically convert all timestamps to Coordinated Universal Time (UTC).",
+        "D": "To combine multiple time-related columns into a single standardized column.",
+        "E": "To minimize memory usage and optimize storage efficiency."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "Clustering in data science involves grouping similar data points to uncover patterns without predefined labels. Which of the following best describes the primary goal of clustering in data science?",
+      "options": {
+        "A": "Predicting a continuous outcome variable",
+        "B": "Classifying data into predefined categories",
+        "C": "Grouping similar data points together based on features",
+        "D": "Identifying outliers in a dataset",
+        "E": "Reducing computational complexity during model training"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "question": "According to the lecture, in the context of structured, semi-structured, and unstructured data, which of the following best describes a key characteristic of structured data?",
+      "options": {
+        "A": "Structured data follows a predefined schema, ensuring consistency and integrity.",
+        "B": "Structured data allows for flexible and evolving data formats without predefined organization.",
+        "C": "Structured data does not require any indexing or constraints for efficient querying.",
+        "D": "Structured data is always stored as plain text without any specific format.",
+        "E": "Structured data completely eliminates the need for data validation."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to lecture slides (data-wrangling-part1), which of the following measures for data quality relates to the correctness of data that is collected?",
+      "options": {
+        "A": "Accuracy",
+        "B": "Completeness",
+        "C": "Consistency",
+        "D": "Believability"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to data exploration slides, which of the following is correct for a histogram chart?",
+      "options": {
+        "A": "Histogram shows the comparison of the values.",
+        "B": "We can rearrange the bars in a histogram.",
+        "C": "We are able to plot categorized data.",
+        "D": "The area of the bar denotes the values in a histogram and not the bar chart.",
+        "E": "Histogram is a bar chart."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "question": "In the context of schema-on-read and schema-on-write approaches, which of the following is the primary advantage of schema-on-read compared to schema-on-write?",
+      "options": {
+        "A": "Schema-on-read ensures strict data validation before data ingestion.",
+        "B": "Schema-on-read allows for greater flexibility and adaptability when dealing with evolving or heterogeneous data sources.",
+        "C": "Schema-on-read processes data more quickly during retrieval compared to schema-on-write.",
+        "D": "Schema-on-read enforces predefined relationships and constraints between different datasets.",
+        "E": "Schema-on-read eliminates the need for any data transformation or cleaning."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "In a dataset with both continuous and categorical variables, which visualization method is most suitable for examining the relationship between a continuous variable and a categorical variable with more than two categories?",
+      "options": {
+        "A": "Box plot for the continuous variable and color-coded by the categorical variable.",
+        "B": "Heatmap of correlations between all variables.",
+        "C": "Scatter plot with different colors for each category of the categorical variable.",
+        "D": "Line chart for each category of the categorical variable.",
+        "E": "Violin plot for the continuous variable and split by the categorical variable."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "Which of the following is true about semi-structured data models like XML?",
+      "options": {
+        "A": "They rely on predefined schemas that must be applied before data is stored.",
+        "B": "They represent data using a set of rigid tables with rows and columns.",
+        "C": "They are self-describing documents that can represent tree structures and free-text.",
+        "D": "They are mostly used for numeric data and require precise data types for every field.",
+        "E": "They do not allow for hierarchical relationships or nesting of elements."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "question": "According to the lecture and materials, during the data exploration phase, which of the following methods is suitable for identifying patterns of missing values in a dataset?",
+      "options": {
+        "A": "Use a scatter plot to visualize the relationship between two variables.",
+        "B": "Calculate the mean and median for each variable.",
+        "C": "Use a missing value matrix or heatmap to display the locations of missing values.",
+        "D": "Perform Principal Component Analysis (PCA) to reduce dimensionality.",
+        "E": "Use a classification model to predict missing values."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "question": "What is the correct advantage of using KDE compared to that of using a histogram to analyze data?",
+      "options": {
+        "A": "KDE is faster to compute than plotting a histogram.",
+        "B": "KDE is able to provide a smoother estimate of the probability density compared to a histogram.",
+        "C": "KDE needs less data compared to a histogram to actually see useful results.",
+        "D": "KDE is better for displaying outliers.",
+        "E": "This answer is correct."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "According to data exploration demo_part2, why do we use groupby('hour') in this analysis? df.groupby('hour')['Fahrenheit'].mean() df.groupby('hour')['Fahrenheit'].std()",
+      "options": {
+        "A": "To categorize temperature readings by hour and compute statistics for each hour.",
+        "B": "To sort the dataset in ascending order of time.",
+        "C": "To create a new column in the DataFrame named ‘hour’.",
+        "D": "To permanently modify the dataset by merging duplicate values.",
+        "E": "To find the earliest recorded temperature in the dataset."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "Based on the lecture and readings on Data Wrangling, what is the primary difference between incomplete data and intentional missing data in a real-world dataset?",
+      "options": {
+        "A": "Incomplete data occurs due to unintentional errors or missing records, whereas intentional missing data is deliberately left blank or replaced with a default value.",
+        "B": "Incomplete data is always caused by privacy concerns, while intentional missing data occurs due to data collection issues.",
+        "C": "Intentional missing data can be ignored, whereas incomplete data must always be corrected.",
+        "D": "Incomplete data is always incorrect, while intentional missing data is always correct.",
+        "E": "Extra data existing constitutes as incomplete data, whereas missing intentional data results from the deletion of data."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "Which of the following is an example of a nominal attribute?",
+      "options": {
+        "A": "Hair color (e.g., black, brown, blond).",
+        "B": "Temperature in Celsius.",
+        "C": "Age represented in years.",
+        "D": "Size categories (e.g., small, medium, large).",
+        "E": "The price of an item in dollars."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "Which statement below is true?",
+      "options": {
+        "A": "A query joining two tables must have three join conditions. Joining(N) tables requires (N+1) conditions.",
+        "B": "A query joining three tables must have two join conditions. Joining(N) tables requires (N-1) conditions.",
+        "C": "A query joining N tables must have N join conditions. Each table in the join requires its own unique join condition.",
+        "D": "A query joining three tables will fail. An equijoin query can only join two tables.",
+        "E": "A query joining three tables must have three join conditions -one for each table."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "Which statement is logically equivalent to SELECT * FROM TableA A, TableB B WHERE A.id = B.id?",
+      "options": {
+        "A": "SELECT * FROM TableA A INNER JOIN TableB B ON A.id = B.id;",
+        "B": "SELECT * FROM TableA A OUTER JOIN TableB B ON A.id = B.id;",
+        "C": "SELECT * FROM TableA A LEFT JOIN TableB B ON A.id = B.id;",
+        "D": "SELECT * FROM TableA A RIGHT JOIN TableB B ON A.id = B.id;",
+        "E": "None of above is correct."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on data exploration, how can data visualization mislead analysts even when the underlying data is accurate?",
+      "options": {
+        "A": "The human eye cannot interpret large datasets, making visualization unreliable.",
+        "B": "Poor choice of scales, axes, or aggregations can distort trends and relationships in the data.",
+        "C": "Data visualizations always provide the most objective representation of the dataset.",
+        "D": "Using multiple visualization techniques on the same dataset leads to conflicting insights.",
+        "E": "Machine learning algorithms do not rely on visualization, making it irrelevant for data exploration."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "According to the lecture, if you have a table named Students with columns (sid, name, age, gpa), then in relational database terminology, each row in the Students table is referred to as a __?___",
+      "options": {
+        "A": "Tuple (or instance)",
+        "B": "Column",
+        "C": "Database",
+        "D": "Schema",
+        "E": "Attribute"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on data exploration (page 25), which of the following is an example of an asymmetric binary attribute?",
+      "options": {
+        "A": "A medical test result where positive is more significant than negative.",
+        "B": "A gender attribute with values male and female.",
+        "C": "A temperature measurement in Celsius.",
+        "D": "A zip code attribute representing different geographic regions.",
+        "E": "A hair color attribute with values like black, brown, and blonde."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to data exploration, which is an advantage of using a quantile-quantile (Q-Q) plot in data analysis?",
+      "options": {
+        "A": "It compares the distribution of a dataset against a theoretical distribution.",
+        "B": "It helps visualize the central tendency of a dataset.",
+        "C": "It shows how two categorical variables are related.",
+        "D": "It replaces the need for boxplots and histograms in statistical analysis.",
+        "E": "It measures the dispersion of a dataset by identifying extreme values."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to lecture materials on exploratory data analysis, a data scientist observes two histograms with identical five-number summaries but differing bin structures during a quality control audit of pharmaceutical batch processing times. Which fundamental analytical limitation of boxplots does this scenario best demonstrate?",
+      "options": {
+        "A": "Boxplots obscure distribution modality and density variations across value ranges.",
+        "B": "Boxplots exaggerate outlier impacts through 1.5×IQR whisker thresholds.",
+        "C": "Boxplots inaccurately represent continuous data as discrete quartiles.",
+        "D": "Boxplots require minimum sample sizes exceeding 100 observations.",
+        "E": "Boxplots confuse stakeholders by using medians instead of means."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to Lecture 1 on Data Exploration, which of the following is NOT an attribute type in data classification?",
+      "options": {
+        "A": "Relational",
+        "B": "Ordinal",
+        "C": "Nominal",
+        "D": "Ratio"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "In data exploration, which of the following is the best approach to detect multicollinearity among features in a dataset?",
+      "options": {
+        "A": "Use a histogram to visualize the distribution of each feature.",
+        "B": "Compute the Variance Inflation Factor (VIF) for each independent variable.",
+        "C": "Apply one-hot encoding to categorical variables.",
+        "D": "Standardize the dataset using min-max scaling.",
+        "E": "Perform K-Means clustering on the dataset."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "According to data exploration demo, what is the meaning of the cursor.fetchall() in this code block?",
+      "options": {
+        "A": "It retrieves the output as the list of tuples.",
+        "B": "It creates a new SQL table and stores the data.",
+        "C": "It retrieves only one row from the SQL output.",
+        "D": "It forms a new SQL query.",
+        "E": "It will crash your whole system."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to lecture on data exploration, which one is continuous attribute?",
+      "options": {
+        "A": "Zip code",
+        "B": "Salary",
+        "C": "Age",
+        "D": "Gender",
+        "E": "Name"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "Which of the following is NOT a major technique used in the data exploration phase?",
+      "options": {
+        "A": "Descriptive Statistics",
+        "B": "Data Visualization",
+        "C": "Correlation Analysis",
+        "D": "Regression Analysis",
+        "E": "Cluster Analysis"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "question": "According to lecture on January 29th on the Codio Data Exploration Demo, what is the main purpose of using the 'with' function when opening a URL request?",
+      "options": {
+        "A": "It makes sure that the connection is automatically closed after the code block completes.",
+        "B": "It allows multiple URL requests to be opened simultaneously without error.",
+        "C": "It continually tries to establish a connection upon failure until success.",
+        "D": "It is required by the urllib library to be able to open the request.",
+        "E": "It acts as a while loop for as long as the connection remains until terminated within the code block."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to data visualization best practices, which of the following would NOT be a good reason to use a box plot?",
+      "options": {
+        "A": "To show correlations between two variables.",
+        "B": "To show and compare distribution values.",
+        "C": "To identify and display outliers in a dataset.",
+        "D": "To show data distribution shapes such as asymmetry and skewness.",
+        "E": "To visualize the five-number summary of a dataset."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the Data Exploration PDF (page 35), what is the 'usual' relation between an Outlier and Inter-Quartile Range (IQR)?",
+      "options": {
+        "A": "Outlier is usually a value higher/lower than 1.5 times of IQR.",
+        "B": "Outlier is usually a value higher than 1.5 times of IQR.",
+        "C": "Outlier is usually a value lower than 0.5 times of IQR.",
+        "D": "Outlier is usually a value higher/lower than 0.5 times of IQR.",
+        "E": "There is no usual definition to identify outlier solely based on IQR."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on database querying, what is the primary reason for using a cursor in SQL operations?",
+      "options": {
+        "A": "A cursor allows for row-by-row processing of query results, making it useful for handling large datasets.",
+        "B": "A cursor automatically optimizes SQL queries to improve performance.",
+        "C": "A cursor is required to execute any SQL query, including CREATE TABLE statements.",
+        "D": "A cursor prevents SQL injection attacks by default, without needing parameterized queries.",
+        "E": "A cursor stores query results permanently in the database for future use."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the Data Exploration PDF (page 13), which of the following best describes the purpose of covariance in statistical analysis?",
+      "options": {
+        "A": "Covariance measures the direction of the relationship between two variables.",
+        "B": "Covariance always provides a standardized value between -1 and 1.",
+        "C": "Covariance is used to calculate the mean of a dataset.",
+        "D": "A covariance value of zero always indicates that two variables are independent.",
+        "E": "Covariance is the same as correlation."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture data exploration (Measuring the Dispersion of Data), what happens when the standard deviation of a dataset increases while the mean remains constant?",
+      "options": {
+        "A": "The data points become more spread out from the mean.",
+        "B": "The distribution becomes more skewed.",
+        "C": "When the standard deviation increases, all data points increase as well.",
+        "D": "The variance decreases.",
+        "E": "The median must change when the standard deviation increases."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to slide 10 of the Intro to Data Science lecture, which of the following best describes the difference between Machine Learning and Data Science?",
+      "options": {
+        "A": "Machine learning deals with the creation of new models to predict based on training data. Data science deals with exploring data and finding trends, in part by using those models.",
+        "B": "Machine learning is purely theoretical, while data science is purely practical.",
+        "C": "Machine learning is the study of building neural networks to generate new data, such as images and text. Data science uses simpler models to analyze existing data and learn from it.",
+        "D": "Data science encompasses the process of gathering and cleaning data, while machine learning only focuses on the specific algorithms used to analyze that data.",
+        "E": "Machine learning is about working with structured data, such as from databases and spreadsheets. Data science often deals with that data, but can deal with unstructured data as well, such as images and videos."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the Data Exploration lecture and demo, which of the following best describes the difference between the WHERE and HAVING keywords in SQL?",
+      "options": {
+        "A": "WHERE is used to filter rows before data is aggregated into groups. HAVING is used to filter groups after they have been aggregated.",
+        "B": "HAVING is a more modern filtering clause with added functionality. WHERE still functions, but it is considered deprecated.",
+        "C": "WHERE is used to filter rows based on their values. HAVING is used to exclude rows that do not have a value for a given field.",
+        "D": "WHERE can be used with only the SELECT statement. HAVING can be used with the SELECT, UPDATE, and DELETE statements.",
+        "E": "There is no real difference. HAVING and WHERE are identical clauses that are interchangeable."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "What is the most likely data type of data after executing this code? with open('sample.json','r') as f: data = json.load(f)",
+      "options": {
+        "A": "A Python dictionary or a list, depending on the JSON structure.",
+        "B": "An instance of a user-defined class dynamically inferred from the JSON schema.",
+        "C": "A hierarchical tree structure where each node is a JSON key-value pair.",
+        "D": "A serialized JSON object stored as a Python string.",
+        "E": "A Pandas DataFrame if the JSON contains tabular data."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on Data Exploration, which type of attribute is represented by the following scenario? In a race, five athletes finish at different times. You rank them from 1st place to 5th place based on who finishes first to last. What type of attribute is used when ranking athletes from 1st to 5th?",
+      "options": {
+        "A": "Ordinal attribute.",
+        "B": "Interval attribute.",
+        "C": "Ratio attribute.",
+        "D": "Nominal attribute.",
+        "E": "Binary attribute."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "Scenario: A sports analytics company is analyzing player performance statistics from multiple basketball games. Each game is recorded with numerical values such as points scored, assists, and rebounds for each player. According to the lecture on data exploration from slide 27, which type of numeric attribute best describes the number of points a player scores in a game?",
+      "options": {
+        "A": "Nominal attribute",
+        "B": "Ordinal attribute",
+        "C": "Discrete numeric attribute",
+        "D": "Continuous numeric attribute",
+        "E": "Binary attribute"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "question": "According to the lecture on data exploration from slide 28, which of the following data types is considered ratio-scaled?",
+      "options": {
+        "A": "Temperature in Celsius",
+        "B": "Time of day on a 12-hour clock",
+        "C": "Length of an object in meters",
+        "D": "Customer ID numbers",
+        "E": "Grades in a university course (A, B, C, etc.)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "question": "According to the lecture on data exploration from slide 10, which of the following statements about schema-on-read is correct?",
+      "options": {
+        "A": "Schema is applied before data is stored.",
+        "B": "Schema is applied while reading the data.",
+        "C": "Schema-on-read is commonly used in traditional relational databases.",
+        "D": "Schema-on-read enforces strict data structure constraints.",
+        "E": "Schema-on-read makes data loading slower than schema-on-write."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "According to the lecture on probability distributions, where do most data points lie in a normal distribution?",
+      "options": {
+        "A": "Most data points cluster around the mean, with fewer values appearing as you move further away.",
+        "B": "Most data points are found in the extreme tails, far from the mean.",
+        "C": "The data points are evenly distributed across all values, with no concentration near the mean.",
+        "D": "Most data points lie outside the interquartile range (IQR), making the middle range of data less significant.",
+        "E": "Most data points align exactly with the standard deviation, making σ the most frequent value."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on data exploration, which of the following types of data is considered semi-structured?",
+      "options": {
+        "A": "Server log files",
+        "B": "Video files",
+        "C": "SQL application database",
+        "D": "Customer service phone call recordings",
+        "E": "Excel spreadsheets"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture, which statement correctly describes the difference between HAVING and WHERE in SQL?",
+      "options": {
+        "A": "WHERE filters rows before aggregation, while HAVING filters after aggregation.",
+        "B": "HAVING is used only with GROUP BY, while WHERE can be used without GROUP BY.",
+        "C": "WHERE and HAVING are interchangeable in SQL queries.",
+        "D": "HAVING can be used to filter individual rows, while WHERE filters grouped data.",
+        "E": "WHERE applies only to SELECT statements, but HAVING applies to all SQL queries."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture notes on measuring central tendency, imagine the following situation: A hospital is analyzing patient wait times in the emergency room to improve efficiency. The data shows that most patients wait between 15 to 30 minutes, but a few extreme cases wait over 5 hours. Which statistical measure is the most appropriate to describe the 'typical' wait time?",
+      "options": {
+        "A": "Median.",
+        "B": "Mean.",
+        "C": "Mode.",
+        "D": "Standard Deviation.",
+        "E": "Range."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on Data preprocessing tasks, which of the following is not a Data Preprocessing task?",
+      "options": {
+        "A": "Model Training",
+        "B": "Data Integration",
+        "C": "Data Reduction",
+        "D": "Data Cleaning",
+        "E": "Data transformation and data discretization"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on data exploration, which one of the following is not part of 'The 5 Vs of Big Data'?",
+      "options": {
+        "A": "Volume",
+        "B": "Velocity",
+        "C": "Variety",
+        "D": "Veracity",
+        "E": "Visualization"
+      },
+      "correct_answer": "E"
+    },
+    {
+      "question": "Which SQL command should be used for querying a database table?",
+      "options": {
+        "A": "CREATE",
+        "B": "SELECT BY",
+        "C": "SELECT",
+        "D": "FETCH BY",
+        "E": "FULL JOIN"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "question": "According to the lecture on data exploration, which of the following statements about Interquartile Range (IQR) is correct?",
+      "options": {
+        "A": "The Interquartile Range (IQR) is the difference between the third quartile (Q3) and the first quartile (Q1).",
+        "B": "The IQR is calculated as the difference between the maximum and minimum values in the dataset.",
+        "C": "A higher IQR value always indicates a normally distributed dataset.",
+        "D": "The IQR is only applicable to normally distributed datasets.",
+        "E": "The IQR is another term for the standard deviation."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on data exploration, what type of distribution does the below description represent? 'When plotting a dataset, the mean is greater than the median and the distribution has a longer tail extending to the right.'",
+      "options": {
+        "A": "Symmetric Distribution",
+        "B": "Negatively Skewed Distribution",
+        "C": "Bimodal Distribution",
+        "D": "Positively Skewed Distribution",
+        "E": "Normal Distribution"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "question": "You are given a dataset containing customer purchase information of a store. Your boss wants to compare how many customers fall into different age groups (e.g., 18-25, 26-35, 36-45, etc.) and also analyze the distribution of total purchase amounts. Based on your learnings from the data exploration lecture, determine which visualization techniques are the best ones for your use case.",
+      "options": {
+        "A": "Histogram for purchase amounts and a bar chart for age groups",
+        "B": "Bar chart for purchase amounts and a histogram for age groups",
+        "C": "Histogram for both purchase amounts and age groups",
+        "D": "Pie chart for purchase amounts and a histogram for age groups",
+        "E": "Bar chart for both purchase amounts and age groups"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture slides (Slide 13-14), what is a major drawback of the relational model compared to semi-structured models like XML?",
+      "options": {
+        "A": "Lack of support for transactions",
+        "B": "Inefficiency in handling hierarchical or nested data",
+        "C": "Inability to enforce constraints on data",
+        "D": "Difficulty in handling flexible or evolving schemas",
+        "E": "None of the Above"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "According to the lecture on data visualization, what is the main difference between schema-on-write and schema-on-read?",
+      "options": {
+        "A": "Schema-on-write requires a predefined schema during data loading, while schema-on-read applies the schema during data access.",
+        "B": "Schema-on-read is faster for writing data than schema-on-write.",
+        "C": "Schema-on-write applies schemas dynamically, while schema-on-read uses fixed schemas.",
+        "D": "Schema-on-read is used exclusively for multimedia data.",
+        "E": "None of the above."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on data visualization, which graphical technique is most appropriate for revealing multivariate patterns and relationships across several variables simultaneously?",
+      "options": {
+        "A": "Parallel coordinate plot",
+        "B": "Simple histogram",
+        "C": "Basic scatter plot",
+        "D": "Individual box plot",
+        "E": "Single line chart"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the intro to data science lecture, which characteristic of big data refers to the trustworthiness, accuracy, and overall quality of the data being analyzed?",
+      "options": {
+        "A": "Veracity",
+        "B": "Velocity",
+        "C": "Variety",
+        "D": "Volume",
+        "E": "Value"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on data exploration, which of the following best describes the difference between discrete and continuous attributes?",
+      "options": {
+        "A": "Discrete attributes have a finite or countable number of values, while continuous attributes can take any real value within a range.",
+        "B": "Discrete attributes are always numerical, while continuous attributes are always categorical.",
+        "C": "Discrete attributes can only be represented as binary values (0 or 1), while continuous attributes do not.",
+        "D": "Continuous attributes are used in structured data, while discrete attributes are used in unstructured data.",
+        "E": "There is no real difference between discrete and continuous attributes in data science."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the Data Exploration lecture and demo, which of the following best describes the internal structure of a pandas DataFrame as used in Python?",
+      "options": {
+        "A": "It is a dictionary where each key is a column name and each value is a Series object representing that column.",
+        "B": "It is a one-dimensional labeled array capable of holding any data type (integers, strings, floating point numbers).",
+        "C": "It is a data field, representing a characteristic or feature of a data object.",
+        "D": "It is implemented as a JSON object, where each key is a column name and each value is a list containing the column’s data.",
+        "E": "It is a list of Excel sheet objects where each column has its own JSON file with a tiny SQLite database running secret queries."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the class notes on Data Exploration Demo, which of the following is the correct syntax for loading a JSON object (represented as a Python dict) called 'rawtemps' into a pandas dataframe?",
+      "options": {
+        "A": "df = pd.read_json(io.StringIO(json.dumps(rawtemps)))",
+        "B": "df = pd.read_json(json.dumps(rawtemps))",
+        "C": "df = pd.read_json(rawtemps)",
+        "D": "df = pd.read_json(io.StringIO(rawtemps))",
+        "E": "df = pd.read_json(io.BytesIO(json.dumps(rawtemps).encode('utf-8'))"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on Data Exploration, what is the key characteristic of schema-on-read approach that makes it useful in modern data management?",
+      "options": {
+        "A": "Enforces strict data type validation during initial data ingestion",
+        "B": "Provides maximum flexibility by deferring schema definition until data is accessed",
+        "C": "Eliminates the need for any data structure management",
+        "D": "Guarantees complete data integrity through pre-defined constraints",
+        "E": "Requires complete metadata mapping before data storage"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "According to the lecture on Data Exploration, what is the trouble with relying solely on summary statistics when analyzing a dataset?",
+      "options": {
+        "A": "Sometimes two datasets can have identical summary statistics but very different distributions.",
+        "B": "Summary statistics are only useful for small datasets.",
+        "C": "Summary statistics always give an incomplete picture of the data.",
+        "D": "Summary statistics are only valid if the dataset follows a normal distribution.",
+        "E": "Please don't pick me."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on Data Exploration, which of the following is an attribute type that has exactly two states always and follows the principle 'Both outcomes are equally important' always?",
+      "options": {
+        "A": "Binary.",
+        "B": "Nominal.",
+        "C": "Ordinal.",
+        "D": "Discrete.",
+        "E": "Continuous."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on Data Exploration, which statement correctly describes the cardinality and arity of this data?",
+      "options": {
+        "A": "The cardinality of the Students table is 3, and the arity is 4.",
+        "B": "The cardinality of the Students table is 4, and the arity is 3.",
+        "C": "The cardinality of the Student table is 12, and the arity is 3.",
+        "D": "The cardinality and arity refer to the same thing, and the value for this table is 4.",
+        "E": "The Arity of the Student Table is 4, but cardinality refers to the number of relationships between different tables, as we don't have a second table cardinality cannot be defined."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture 'Data Exploration', what is the purpose of using the pandas library in the context of the weather data analysis project?",
+      "options": {
+        "A": "To load, manipulate, and analyze weather data, including converting units and calculating statistics like mean and standard deviation.",
+        "B": "To fetch weather data, such as temperature, for a specific location based on latitude and longitude.",
+        "C": "To get city information, including latitude and longitude, from an open-source geocoding website.",
+        "D": "To visualize data using matplotlib, such as scatter plots and histograms.",
+        "E": "To store and query weather data using SQLite database for complex data analysis."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on data exploration, how do traditional databases stores load data into a table?",
+      "options": {
+        "A": "Schema-On-Write.",
+        "B": "Schema-On-Read.",
+        "C": "Schemaless.",
+        "D": "noSQL.",
+        "E": "Schemamore."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "Which of the following variables is an example of a continuous variable?",
+      "options": {
+        "A": "Atmospheric pressure",
+        "B": "A score for an Olympic gymnast's performance",
+        "C": "A health insurance member number",
+        "D": "Measured time to complete a lap around a track in milliseconds",
+        "E": "The number of this question"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the introduction to data science lecture, what is defined as the velocity of big data?",
+      "options": {
+        "A": "Change over time.",
+        "B": "The speed of the data.",
+        "C": "How fast data is created.",
+        "D": "How fast you receive the data.",
+        "E": "42 nm/ps."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on Python and SQLite, which of the following queries correctly calculates the average temperature for peak and off-peak hours based on the given conditions?",
+      "options": {
+        "A": "SELECT CASE WHEN hour BETWEEN 9 AND 18 THEN 'Peak Hours' ELSE 'Off-Peak Hours' END AS time_period, AVG(Celsius) AS avg_temp_celsius, AVG(Fahrenheit) AS avg_temp_fahrenheit FROM weather GROUP BY time_period;",
+        "B": "SELECT hour, AVG(Celsius) AS avg_temp_celsius, AVG(Fahrenheit) AS avg_temp_fahrenheit FROM weather GROUP BY hour HAVING hour BETWEEN 9 AND 18;",
+        "C": "SELECT hour, AVG(Celsius) AS avg_temp_celsius, AVG(Fahrenheit) AS avg_temp_fahrenheit FROM weather WHERE hour BETWEEN 9 AND 18 GROUP BY hour;",
+        "D": "SELECT hour, AVG(Celsius) AS avg_temp_celsius, AVG(Fahrenheit) AS avg_temp_fahrenheit FROM weather GROUP BY hour;",
+        "E": "SELECT CASE WHEN hour < 9 OR hour > 18 THEN 'Off-Peak Hours' ELSE 'Peak Hours' END AS time_period, SUM(Celsius) AS sum_temp_celsius, SUM(Fahrenheit) AS sum_temp_fahrenheit FROM weather GROUP BY time_period;"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on data exploration, which type of plot is most effective for identifying outliers in a dataset?",
+      "options": {
+        "A": "Box plot",
+        "B": "Histogram",
+        "C": "Bar chart",
+        "D": "Scatter plot",
+        "E": "Pie chart"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture, what is the primary difference between structured, semi-structured, and unstructured data?",
+      "options": {
+        "A": "Structured data follows a fixed schema, semi-structured data has a flexible schema, and unstructured data has no predefined schema.",
+        "B": "Structured data can only be stored in relational databases, while semi-structured and unstructured data must be stored in NoSQL databases.",
+        "C": "Structured data cannot be transformed into unstructured data, whereas semi-structured data can be converted into both structured and unstructured formats.",
+        "D": "Unstructured data always consists of multimedia files, while structured data includes only text and numerical values.",
+        "E": "Semi-structured data lacks any form of organization and cannot be queried efficiently."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to data exploration demo, why should parameterized queries be used instead of directly formatting SQL statements with f-strings in Python?",
+      "options": {
+        "A": "Using parameterized queries prevents SQL injection by ensuring user input is treated as data rather than executable code.",
+        "B": "Parameterized queries improve performance by making the database execute queries faster, but they do not affect security.",
+        "C": "Using f-strings in SQL queries is perfectly safe as long as the input is properly formatted and sanitized manually.",
+        "D": "The main reason to avoid f-strings in SQL queries is that they make the code harder to read and maintain.",
+        "E": "Using f-strings in SQL queries causes syntax errors because Python does not support string interpolation in SQL statements."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "As discussed in class, mean and median are needed for what measurement?",
+      "options": {
+        "A": "Skew",
+        "B": "Average",
+        "C": "Weighted Average",
+        "D": "Encoded Average"
+      },
+      "correct_answer": "A"
+    }
+  ]
+}
+
