@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  #quiz-container {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .question {
+    margin-bottom: 20px;
+  }
+  
+  .options {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  label {
+    display: block; /* This makes each option appear on a new line */
+    margin: 5px 0;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  #submit-btn {
+    margin-top: 20px;
+    display: none;
+  }
+  
+  #results {
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,1174 @@
+{
+  "questions": [
+    {
+      "question": "According to the lecture on Data Wrangling by Dr. Castro, what is the primary purpose of data reduction in data preprocessing?",
+      "options": {
+        "A": "To obtain a reduced representation of the data set that is much smaller in volume but produces similar analytical results.",
+        "B": "To eliminate all noise and inconsistencies from the data set.",
+        "C": "To integrate data from multiple sources into a single database.",
+        "D": "To transform all data into a standardized format.",
+        "E": "To create new attributes that capture information more effectively than the original ones."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the Data Wrangling Part 1, what is the primary purpose of data cleaning in the data preprocessing pipeline?",
+      "options": {
+        "A": "To detect and correct issues such as missing values, noisy data, outliers, and inconsistencies.",
+        "B": "To merge multiple datasets into a unified schema for analysis.",
+        "C": "To reduce the dimensionality of data by removing irrelevant features.",
+        "D": "To transform raw data into normalized or discretized formats for modeling.",
+        "E": "To ensure all datasets are stored in a single centralized location for accessibility."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the data integration part in data wrangling lecture slides (18-24), a national healthcare network is merging patient records from two independent hospital systems into a unified database. One system, used by Hospital A, stores Social Security Numbers (SSNs) in the format 'XXX-XX-XXXX', while the other system, used by Hospital B, records SSNs as a continuous 9-digit number ('XXXXXXXXX'). After integration, duplicate patient records emerge, insurance claims are mismatched, and critical medical histories are fragmented across multiple profiles. Additionally, some patients appear to have two separate billing accounts, while others become unidentifiable due to inconsistencies in the identification process. What is the primary data integration issue here?",
+      "options": {
+        "A": "The same patient exists in both systems but is not recognized as a single entity.",
+        "B": "The SSN field is formatted differently across databases, requiring transformation.",
+        "C": "The same patient data is duplicated in different formats, causing unnecessary storage.",
+        "D": "The same SSN has been recorded with inconsistent values, leading to identity mismatches.",
+        "E": "Some patient records reference SSNs that do not exist in the integrated database."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "According to the data-wrangling-v2 lecture slides, if you are integrating from multiple sources and encounter redundant attributes, which analysis technique can you use to help detect these redundancies?",
+      "options": {
+        "A": "Correlation Analysis",
+        "B": "Principal Component Analysis",
+        "C": "Binning",
+        "D": "Clustering Analysis",
+        "E": "Regression Analysis"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to slide data-wrangling-v2, what is the primary purpose of the chi-squared (χ²) test in data analysis?",
+      "options": {
+        "A": "To determine whether there is a significant relationship between categorical variables.",
+        "B": "To calculate the exact probability of an event occurring in a dataset.",
+        "C": "To identify the correlation coefficient between two continuous variables.",
+        "D": "To replace missing values in datasets by estimating expected frequencies.",
+        "E": "To ensure that all datasets conform to a normal distribution."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to data-wrangling-v2 P25,26, a city shows a strong correlation between the number of ice cream shops and the crime rate. According to the lecture's discussion of chi-square test and correlation, what is the most likely explanation for this relationship?",
+      "options": {
+        "A": "There is a hidden third variable (such as population density or temperature) that affects both variables independently.",
+        "B": "Ice cream consumption directly causes higher crime rates.",
+        "C": "The high chi-square value proves that ice cream shops cause crime.",
+        "D": "The correlation is coincidental and has no statistical significance.",
+        "E": "The relationship must be inversely causal - crime rates influence ice cream shop numbers."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the Data Wrangling lecture(v2-31,32,35), in a data science project, if you encounter a dataset with significant noise and dimensionality issues, which sequence of preprocessing steps would be MOST appropriate to prepare this data while preserving its essential characteristics?",
+      "options": {
+        "A": "Apply PCA first, then use equal-width binning, followed by min-max normalization.",
+        "B": "Start with z-score normalization, then apply clustering-based discretization, and finish with dimensionality reduction using PCA.",
+        "C": "Begin with decimal scaling normalization, use histogram analysis for discretization, then apply correlation analysis.",
+        "D": "Use equal-frequency binning first, followed by dimensionality reduction through PCA, then apply decimal scaling.",
+        "E": "Apply data cleaning to handle noise, then use PCA for dimensionality reduction, followed by clustering-based discretization."
+      },
+      "correct_answer": "E"
+    },
+    {
+      "question": "According to the data-wrangling-part 1 slides about 'how to correct dirty data', how should dirty data be corrected according to the given process?",
+      "options": {
+        "A": "Regression, Clustering, Binning, Combined computer and human, Inspection.",
+        "B": "Binning, Regression, Clustering, Combined computer and human, Inspection.",
+        "C": "Clustering, Binning, Regression, Combined computer and human, Inspection.",
+        "D": "Inspection, Combined computer and human, Clustering, Regression, Binning.",
+        "E": "Combined computer and human, Clustering, Regression, Binning, Inspection."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "According to the data wrangling slides, what is the key difference between smoothing by bin means and smoothing by bin boundaries?",
+      "options": {
+        "A": "Smoothing by bin means replaces all values in a bin with the average value of that bin, whereas smoothing by bin boundaries replaces each value with the bin’s minimum or maximum boundary.",
+        "B": "Smoothing by bin means uses z-scores to standardize values, while smoothing by bin boundaries assigns fixed labels to each bin.",
+        "C": "Smoothing by bin means is applicable only to time-series data, whereas smoothing by bin boundaries is used for cross-sectional data.",
+        "D": "Smoothing by bin means employs clustering to determine the bin values, while smoothing by bin boundaries relies on equal-depth partitioning.",
+        "E": "Smoothing by bin means and smoothing by bin boundaries are identical methods with different names."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the Data Wrangling lecture (v2, CAP 5771, Grant & Castro), which would be an example of data discrepancy detection using rules?",
+      "options": {
+        "A": "A height of 10 ft was deemed odd because the study only allowed heights of 5 ft to 7 ft.",
+        "B": "A point with a z-score of 5 was marked as an outlier.",
+        "C": "K-means clustering found several points that did not belong to any cluster.",
+        "D": "Heights are usually around 5 ft and a height of 10 ft was found.",
+        "E": "After regression, one point deviated significantly more than the others."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "Given the data {7, 7, 8, 10, 14, 16, 20, 21, 29, 38, 60, 61}, what will be the result after applying smoothing by bin boundaries with 3 equal frequency bins?",
+      "options": {
+        "A": "Bin1: 7, 7, 7, 10 | Bin2: 14, 14, 21, 21 | Bin3: 29, 29, 61, 61",
+        "B": "Bin1: 8, 8, 8, 8 | Bin2: 18, 18, 18, 18 | Bin3: 47, 47, 47, 47",
+        "C": "Bin1: 7, 8, 10 | Bin2: 14, 16, 20, 21 | Bin3: 29, 38, 60, 61",
+        "D": "Bin1: 7, 10 | Bin2: 14, 21 | Bin3: 29, 61"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to slide 15 of the Data Wrangling Part 2 lecture, how can clustering be used to help identify outliers?",
+      "options": {
+        "A": "Clusters create distinct groups, so any points outside of those groups can be easily identified as a potential outlier.",
+        "B": "Clustering reduces the data set to only the most central data points, eliminating outliers.",
+        "C": "Clustering looks for data points that are close to the average value of the data set, revealing outliers in the process.",
+        "D": "Outliers do not affect the clustering process, and so clusters cannot identify them.",
+        "E": "Clustering puts outliers in the largest cluster, since clusters are always part of the majority group."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "Which of the following statements about Principal Component Analysis (PCA) and Min-Max Normalization is FALSE?",
+      "options": {
+        "A": "Min-Max Normalization is robust to outliers in the dataset.",
+        "B": "Min-Max Normalization scales data to a fixed range, typically [0, 1], by using the formula v′ = (v - min(A)) / (max(A) - min(A)).",
+        "C": "PCA is effective in handling multicollinearity by transforming correlated variables into uncorrelated components.",
+        "D": "PCA reduces dimensionality by projecting data onto orthogonal components that capture maximum variance.",
+        "E": "PCA requires input data to be normalized or standardized before application."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to Data Wrangling V2 slide 20, what is the primary goal of data integration?",
+      "options": {
+        "A": "Reducing the size of individual datasets through dimensionality reduction.",
+        "B": "Combining data from different sources to provide a unified view.",
+        "C": "Detecting and correcting missing values in a single dataset.",
+        "D": "Transforming numerical data into categorical data for better analysis."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "According to the Data Wrangling Part 2 Lecture slides 14 and 15, what are the similarities and differences in the application of linear regression and clustering methods for data smoothing?",
+      "options": {
+        "A": "Both methods are used to handle group characteristics of data, but linear regression is used to find linear relationships between data, while clustering is used to identify distinct groups within the data.",
+        "B": "Both methods rely on the data being normally distributed; linear regression is used to smooth the data, and clustering is used to reduce noise.",
+        "C": "Both methods assume that the residuals of the data must follow a normal distribution, but linear regression is used for modeling relationships, and clustering is used for data normalization.",
+        "D": "Both methods create new datasets; linear regression is used for data standardization, and clustering is used to simplify data dimensions.",
+        "E": "Both methods require strong computational power; linear regression is used to predict future data, and clustering is used to generate new variables."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture on Data Wrangling part-2 from Slide 14: Regression For Data Smoothing, let's assume you have a dataset where the Annual_Income attribute has missing values for some records. After analysis, you discover that Annual_Income is highly correlated with Education_Level and Years_of_Work_Experience. Which imputation method should you apply to most accurately estimate the missing Annual_Income values?",
+      "options": {
+        "A": "Use regression imputation using Education_Level and Years_of_Work_Experience.",
+        "B": "Replace missing incomes with the overall mean income.",
+        "C": "Fill in missing incomes with zero.",
+        "D": "Discard all records with missing Annual_Income.",
+        "E": "Apply random imputation using values from observed incomes."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "A data scientist is working with a global retail company's customer dataset that has the following characteristics: Customer records from multiple regional databases with different schemas, purchase amounts in various currencies, 30% missing values in age field, some implausible age values (e.g., 200 years), and a need to reduce dataset size while preserving patterns for machine learning. According to the data-wrangling-v2 lecture (slides 3, 6, 19, 37, and 50), what would be the most appropriate sequence of data preprocessing steps?",
+      "options": {
+        "A": "First apply semantic integration to unify database schemas, then clean age data using statistical outlier detection and mean imputation, normalize purchase amounts using decimal scaling, and finally use parametric numerosity reduction to create a compact representation.",
+        "B": "First remove all records with missing or invalid ages, then integrate databases using virtual integration, apply min-max normalization to purchases, and use random sampling for data reduction.",
+        "C": "First standardize currencies using z-score normalization, then clean age outliers using IQR method, merge databases into data lake, and apply wavelet transformation for dimensionality reduction.",
+        "D": "First use data warehousing to combine databases, then handle missing ages using regression, normalize purchases with equal-width binning, and apply clustering for data reduction."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "Based on the lectures on Data Wrangling, consider a dataset of temperature readings from various machines/sensors collected at varying time intervals. Few of the machines log data every second, while few do it every minute. What is the best approach to preprocess this data in order to ensure consistency in the dataset?",
+      "options": {
+        "A": "Aggregate the readings over a fixed time window, like considering average temperature per minute, in order to standardize timestamps.",
+        "B": "Use interpolation methods to estimate/generate the missing values for the less frequent recordings.",
+        "C": "First normalize the dataset, and then adjust all the frequencies to match the highest recorded value.",
+        "D": "Duplicate the values for machines with less frequent recordings so that we can match all data to the highest logging frequency.",
+        "E": "Remove the temperature readings from machines that do not log at the same frequency, and maintain uniformity."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture and readings on Data Wrangling, what is the key difference between metadata-based detection and rule-based detection in identifying data discrepancies?",
+      "options": {
+        "A": "Metadata-based detection utilizes stored data attributes such as domain, range, and dependencies, whereas rule-based detection enforces predefined conditions like numerical ranges or logical constraints.",
+        "B": "Metadata-based detection modifies data directly, while rule-based detection only flags errors without modification.",
+        "C": "Rule-based detection focuses on discerning quantitative information while metadata detection goes beyond numbers.",
+        "D": "In the context of metadata-based detection the only capable action is finding query duplicate records, in contrast the rule-based detection can do data cleaning in range of every type of recorded errors.",
+        "E": "Metadata-based detection requires AI models to function, while rule-based detection is manually performed."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "In the descriptive_utils file in the demo, when using describe_numeric2(), what special consideration is given to integer variables?",
+      "options": {
+        "A": "They are given a bin width of 1 for histograms.",
+        "B": "They are converted to float.",
+        "C": "They are removed from the analysis.",
+        "D": "They are automatically categorized."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the data-wrangling-v2 lecture (page 46), which of the following scenarios best demonstrates the use of data cube aggregation for multidimensional analysis?",
+      "options": {
+        "A": "A retailer aggregates total sales across time, product categories, and geographical regions to enable fast querying at various levels of detail.",
+        "B": "A company uses data encryption to ensure customer records are secure during transmission and storage.",
+        "C": "A university uses clustering to group students based on similar study patterns for academic intervention programs.",
+        "D": "A hospital applies normalization to standardize patient data across different departments.",
+        "E": "A financial institution removes redundant columns from its datasets to improve processing speed."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to Data Wrangling V2 slides and class lectures, what is an example of a data compression technique?",
+      "options": {
+        "A": "Histogram-based summarization",
+        "B": "Feature selection",
+        "C": "One-hot encoding",
+        "D": "Decision tree classification"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture Data Wrangling Part 2 (Slide 8), why is data cleaning considered an iterative process?",
+      "options": {
+        "A": "Data cleaning involves continuous improvement by identifying and correcting errors over time.",
+        "B": "Data cleaning is a linear process that follows a strict set of predefined steps without revisiting previous stages.",
+        "C": "Once a dataset is cleaned, further cleaning is unnecessary unless new data is added.",
+        "D": "Data cleaning primarily focuses on formatting inconsistencies rather than detecting outliers or resolving missing values.",
+        "E": "Data cleaning aims to eliminate all variations in the dataset, ensuring that every value is uniform."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture (Grant & Castro, CAP5771, University of Florida) in Data Wrangling part 2 slides, Slide 37, which of the following best describes the purpose of numerosity reduction in data preprocessing?",
+      "options": {
+        "A": "Reducing the data volume by representing it in a more compact form without losing important patterns.",
+        "B": "Eliminating all redundant features from the dataset to decrease computational cost.",
+        "C": "Normalizing data values to fit within a specified range for consistency.",
+        "D": "Combining multiple datasets into a unified format to improve data accessibility.",
+        "E": "Removing all missing values to enhance dataset completeness."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture slides, when examining data quality in medical research data, what specific role does metadata play in discrepancy detection?",
+      "options": {
+        "A": "It enables comparison of DICOM file scan dates and equipment details against patient test results to identify mismatches that wouldn't be visible in the raw data alone.",
+        "B": "It automatically corrects inconsistencies in patient records based on historical data patterns.",
+        "C": "It only validates the file format of medical images without checking content.",
+        "D": "It exclusively tracks patient demographic information for duplicate detection.",
+        "E": "It primarily focuses on storage optimization of medical records."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the Principle Component Analysis slide on the Data Wrangling part 2 slides, what is the correct ordering of the steps?",
+      "options": {
+        "A": "Normalize Input Data, Compute the principle components, Sort the principle components in decreasing eigenvalues/strength, and reduce the size of the data by eliminating the weak components.",
+        "B": "Normalize input data, reduce the size of the data, compute the principle components, and then sort the principle components in decreasing eigenvalues/strength.",
+        "C": "Reduce the size of the data by eliminating the weak components, Compute the principle components, Sort the principle components in decreasing eigenvalues/strength, and then Normalize the data.",
+        "D": "Reduce the size of the data by eliminating the weak components, Normalize the data, Compute the principle components, and then sort the principle components in decreasing eigenvalues/strength."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the Data Wrangling Part 2 lecture, which of the following best describes an advantage of using data normalization in preprocessing?",
+      "options": {
+        "A": "It scales numerical values to a common range, improving model performance and comparability.",
+        "B": "It removes all outliers from the dataset, ensuring clean data for analysis.",
+        "C": "It increases the number of features in a dataset to enhance complexity.",
+        "D": "It converts categorical data into numerical values for better machine learning processing.",
+        "E": "It ensures that all attributes have the same distribution shape before training a model."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "From the concepts taught in Data Wrangling Lecture, which of the following clustering techniques is best suited for data smoothing by averaging data points within clusters to reduce variance and enhance patterns?",
+      "options": {
+        "A": "K-Means Clustering",
+        "B": "DBSCAN",
+        "C": "Agglomerative Hierarchical Clustering",
+        "D": "OPTICS",
+        "E": "Gaussian Mixture Models"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to data-wrangling-v2 page 17, which process is often used to combine data from different sources (virtual or actual) and provide users with a unified view of the data?",
+      "options": {
+        "A": "Data Integration",
+        "B": "Feature Selection",
+        "C": "Regression",
+        "D": "Clustering",
+        "E": "Data Augmentation"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture Data Wrangling Part 2 (Slides 20, 21), which of the following statements about outlier detection methods is correct?",
+      "options": {
+        "A": "The Z-score method uses the mean and standard deviation to identify outliers.",
+        "B": "Box plots visually identify outliers as points beyond 3 standard deviations from the mean.",
+        "C": "Clustering techniques like DBSCAN consider outliers as data points that do not belong to any cluster.",
+        "D": "Correlation analysis is unaffected by outliers in the dataset.",
+        "E": "The IQR method defines outliers as values more than 2.5 times the IQR above the third quartile."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "Which of the following statements accurately describes the equal-width distance partitioning method?",
+      "options": {
+        "A": "It divides the range into N intervals of equal size, where the width of each interval is determined by the formula W = (B - A) / N, where A and B are the lowest and highest values of the attribute.",
+        "B": "It divides the range into intervals of varying widths, ensuring better handling of skewed data. Outliers are less likely to dominate the presentation.",
+        "C": "It uses a dynamic range that adjusts based on data distribution, providing more flexibility for data with outliers.",
+        "D": "It is primarily useful for continuous data but does not work well with categorical attributes or for handling skewed data."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to data-wrangling-v2 page 13, given the sorted data set for prices: {4, 8, 9, 15, 21, 24, 25, 26, 28, 29, 34}, and partitioning into equal-frequency (equi-depth) bins, what is the correct bin and method combination that results in smoothed values of {4, 21, 26}?",
+      "options": {
+        "A": "Smoothing by bin boundaries with the given bins.",
+        "B": "Smoothing by bin means with the given bins.",
+        "C": "Smoothing by bin medians with the given bins.",
+        "D": "Smoothing by bin maximum values with the given bins.",
+        "E": "No smoothing method applied to the given bins."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture Data Wrangling Part 2 (Slides 43, 44), which of the following statements about sampling methods is correct?",
+      "options": {
+        "A": "Sampling without replacement means that once an object is selected, it is removed from the population and cannot be chosen again.",
+        "B": "Simple random sampling always results in a perfectly representative subset of the data, regardless of data skew.",
+        "C": "Stratified sampling is only useful for continuous numerical data and cannot be applied to categorical variables.",
+        "D": "Cluster sampling and stratified sampling are identical methods, both ensuring equal representation from each subgroup.",
+        "E": "Sampling with replacement allows for larger sample sizes but may introduce bias in the results."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to data wrangling v2 slides (pg 28,29), let's say we have a dataset 'Student Grades' where we take two attributes, A and B, where A = Marks and B = Grades. When we apply Pearson product moment coefficient, what is the case when r(A,B) > 0?",
+      "options": {
+        "A": "A and B are positively correlated.",
+        "B": "A and B are negatively correlated.",
+        "C": "A and B are independent attributes.",
+        "D": "A and B have no relation."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the data wrangling demo, why is it recommended to handle outliers before imputing missing data?",
+      "options": {
+        "A": "To ensure that summary statistics like the mean or median are not skewed by extreme values.",
+        "B": "To reduce computational overhead during the imputation process.",
+        "C": "Because outliers cannot be identified after missing data is imputed.",
+        "D": "To avoid introducing new outliers during the imputation process.",
+        "E": "To prioritize outlier removal over addressing missing data."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the Data Wrangling v2 lecture, which of the following is not true of Correlation Analysis?",
+      "options": {
+        "A": "If our correlation analysis shows a high correlation between attributes, then it also implies causation between these attributes.",
+        "B": "The smaller the value given by a Chi-Square test the greater the correlation.",
+        "C": "The Chi-Square test is used for correlation analysis of nominal data.",
+        "D": "Correlation analysis is one of the methods that can be used to identify redundant attributes in datasets.",
+        "E": "Pearson's product moment coefficient can be used for correlation analysis of numeric data."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture Data Wrangling Part 2 (Slides 41, 42), which of the following statements about sampling methods is correct?",
+      "options": {
+        "A": "Simple random sampling ensures that each data point is selected with equal probability, and once selected, it cannot be chosen again.",
+        "B": "Stratified sampling is useful when the data has distinct subgroups, ensuring proportional representation from each group.",
+        "C": "Sampling without replacement means that once a data point is selected, it may still be chosen again in the next iteration.",
+        "D": "Cluster sampling is identical to stratified sampling because both methods divide the data into groups and select samples randomly from each group.",
+        "E": "Systematic sampling selects random samples by grouping data points and selecting an equal number from each group."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "According to data-wrangling-v2 slide 25 and associated lectures, which of the following can be determined by a chi-square (χ^2) test in data wrangling?",
+      "options": {
+        "A": "Correlation in nominal data.",
+        "B": "Correlation in numeric data.",
+        "C": "Causal relations in nominal data.",
+        "D": "Causal relations in numeric data.",
+        "E": "The mean of a type of numeric data."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "According to the lecture Data Wrangling Part 2, (Slide 37,38), which of the following statements about parametric and non-parametric data reduction techniques is correct?",
+      "options": {
+        "A": "Parametric methods assume an underlying data distribution, reducing data by storing only model parameters, while non-parametric methods retain representative data points without assuming a specific distribution.",
+        "B": "Non-parametric methods always provide better data compression than parametric methods because they do not rely on statistical modeling.",
+        "C": "A multiple regression model, which predicts an output based on multiple input variables, is an example of a non-parametric data reduction technique.",
+        "D": "K-means clustering is a parametric data reduction method because it reduces data volume by selecting representative centroids.",
+        "E": "Log-linear models are non-parametric because they approximate probability distributions without assuming a fixed functional form."
+      },
+      "correct_answer": "A"
+    },
+  {
+    "question": "Think back to the Data Wrangling demo - when you first downloaded the data from Kagglehub, the data was stored in a hidden directory. What command could be used to find this folder?",
+    "options": ["ls -al", "ls -l", "cd", "chmod", "mv"],
+    "correct_answer": "ls -al"
+  },
+  {
+    "question": "According to the Data Wrangling Part-1 PDF, select one option which represents correct ordering of data preprocessing steps.",
+    "options": [
+      "Data Cleaning, Data integration, Data Reduction, Data transformation and Data Discretization",
+      "Data integration, Data Cleaning, Data Reduction, Data transformation and Data Discretization",
+      "Data Cleaning, Data Reduction, Data integration, Data transformation and Data Discretization",
+      "Data Cleaning (includes Data Reduction), Data integration, Data transformation and Data Discretization",
+      "None of the other options"
+    ],
+    "correct_answer": "Data Cleaning, Data integration, Data Reduction, Data transformation and Data Discretization"
+  },
+  {
+    "question": "According to lecture data wrangling slide 7, which of the following is NOT a method used for detecting data discrepancies?",
+    "options": [
+      "Checking functional dependency constraints.",
+      "Verifying uniqueness rules.",
+      "Using metadata to compare expected and recorded values.",
+      "Performing Z-score normalization.",
+      "Detecting outliers through correlation analysis."
+    ],
+    "correct_answer": "Performing Z-score normalization."
+  },
+  {
+    "question": "According to the lecture on data wrangling, what is the primary difference between equal-width and equal-depth binning in data discretization?",
+    "options": [
+      "Equal-width binning divides the range of data into intervals of equal size, while equal-depth binning partitions the data so that each bin contains approximately the same number of observations.",
+      "Equal-width binning groups data by unique values, whereas equal-depth binning groups data based on predetermined category labels.",
+      "Equal-width binning is used exclusively for numeric data, while equal-depth binning is applied only to categorical data.",
+      "Equal-width binning normalizes data values to a uniform scale, whereas equal-depth binning standardizes data to a mean of zero.",
+      "Equal-width binning discards outliers by focusing on range limits, whereas equal-depth binning retains all data points regardless of frequency."
+    ],
+    "correct_answer": "Equal-width binning divides the range of data into intervals of equal size, while equal-depth binning partitions the data so that each bin contains approximately the same number of observations."
+  },
+  {
+    "question": "According to lecture, what is NOT an advantage to having a dataset with low dimensions?",
+    "options": [
+      "Feature selection.",
+      "Reduces space and time complexity of data mining.",
+      "Data is less sparse.",
+      "Clustering is more meaningful.",
+      "Visualization is simpler."
+    ],
+    "correct_answer": "Feature selection."
+  },
+  {
+    "question": "A dataset contains student test scores: {50, 55, 60, 62, 65, 68, 72, 75, 80, 150}. Using the Interquartile Range (IQR) method, which of the following values would be classified as an outlier?",
+    "options": ["150", "50", "80", "72", "No outliers exist in this dataset."],
+    "correct_answer": "150"
+  },
+  {
+    "question": "According to the introduction to data wrangling lecture, let the sorted list of prices, {7, 9, 11, 13, 14, 14, 14, 18, 21, 22, 23, 24}, be sorted into 3 bins of equal-frequency following with smoothing by bin means. Given that the 3 bins are in ascending order, find the product of the first price of each bin.",
+    "options": ["3375", "2058", "48760", "10", "This data cannot be sorted into bins as it is already in a list."],
+    "correct_answer": "3375"
+  },
+  {
+    "question": "According to the Data Wrangling lecture, which of the following best describes the purpose of data normalization in data preprocessing?",
+    "options": [
+      "To improve the performance and interpretability of models trained and tested with the data.",
+      "To make the data more human-readable by adjusting the range and distribution of data.",
+      "To clean the data by removing noise from it and summarizing it.",
+      "To simplify the data by removing redundant information from the dataset.",
+      "To standardize the units of measurements of the data."
+    ],
+    "correct_answer": "To improve the performance and interpretability of models trained and tested with the data."
+  },
+  {
+    "question": "According to data wrangling v2 lecture, which of the following data reduction type states 'Approximates multidimensional probability distributions'?",
+    "options": [
+      "Log-linear model",
+      "Linear regression",
+      "Multiple regression",
+      "Histogram analysis",
+      "Clustering"
+    ],
+    "correct_answer": "Log-linear model"
+  },
+  {
+    "question": "According to Dr. Grant's lecture on Data Wrangling v2, slide 38, which of the following is a key characteristic of parametric data reduction methods?",
+    "options": [
+      "They assume a specific mathematical model to approximate data.",
+      "They store full datasets while reducing redundancy through compression.",
+      "They do not require any predefined assumptions about data distribution.",
+      "They rely exclusively on clustering techniques to reduce dimensionality.",
+      "They always result in data loss due to lossy compression techniques."
+    ],
+    "correct_answer": "They assume a specific mathematical model to approximate data."
+  },
+  {
+    "question": "According to Data wrangling lecture, In a machine learning project, two different techniques were used for attribute construction: Combining features and Data discretization. How do combining features and data discretization differ in their impact on a machine learning model?",
+    "options": [
+      "Combining features enhances predictive power by creating richer representations, while data discretization simplifies models and improves interpretability.",
+      "Both combining features and data discretization primarily serve the same purpose: reducing redundancy in the dataset.",
+      "Data discretization creates more detailed numerical features, while combining features simplifies the dataset.",
+      "Combining features primarily reduces dataset size, while data discretization improves model accuracy by increasing feature granularity.",
+      "Both techniques are exclusively used for reducing overfitting in models."
+    ],
+    "correct_answer": "Combining features enhances predictive power by creating richer representations, while data discretization simplifies models and improves interpretability."
+  },
+  {
+    "question": "According to the Data Wrangling v2 Slide 14 lecture slides from Dr. Castro, which of the following best describes the process of detecting and resolving data value conflicts during data integration?",
+    "options": [
+      "Identifying and reconciling discrepancies in attribute values from different sources for the same real-world entity.",
+      "Normalizing data values to a common range.",
+      "Removing duplicate records from the dataset.",
+      "Using adaptive sampling methods to select a representative subset of the data.",
+      "Generating concept hierarchies to organize data into multiple levels of abstraction."
+    ],
+    "correct_answer": "Identifying and reconciling discrepancies in attribute values from different sources for the same real-world entity."
+  },
+  {
+    "question": "According to Dr. Grant's lecture on Data Wrangling v2, slide 54, what is the main advantage of using equal-depth partitioning for data discretization?",
+    "options": [
+      "Ensures each bin contains around the same amount of data points, effective for handling skewed data.",
+      "Splits up the range into intervals of equal size for ease of implementation and understanding.",
+      "Handles dynamic data well due to computations becoming less extensive with each new change in data.",
+      "Automatically removes outliers when splitting up the data points into bins.",
+      "Implements very intricate algorithms to ensure that data is handled to perfection."
+    ],
+    "correct_answer": "Ensures each bin contains around the same amount of data points, effective for handling skewed data."
+  },
+  {
+    "question": "According to the lecture on Data Wrangling by Dr. Christan Grant and Dr. Laura Melissa Cruz Castro, referencing Data Wrangling Part 1 slides (slide 7), which method is most effective for addressing inconsistencies among categorical data entries such as 'NYC' and 'New York City'?",
+    "options": [
+      "Standardizing categorical values through mapping to ensure uniformity across the dataset.",
+      "Using clustering algorithms to group similar categorical entries.",
+      "Employing regression analysis to predict correct categorical labels.",
+      "Maintaining discrepancies to preserve the raw data format.",
+      "Implementing a random forest classifier to resolve categorical discrepancies."
+    ],
+    "correct_answer": "Standardizing categorical values through mapping to ensure uniformity across the dataset."
+  },
+  {
+    "question": "Data quality issues can arise due to various reasons, such as human errors, system faults, or intentional manipulation. Which of the following correctly describes an example of a noisy data issue?",
+    "options": [
+      "A salary value recorded as '-10' due to an error in data entry.",
+      "An employee record where the occupation field is left blank.",
+      "A dataset where different records have conflicting birthday and age values.",
+      "A company setting all customers’ birthdates to January 1st for convenience.",
+      "A survey where some participants' responses are missing."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to lecture, which major task in data preprocessing handles detecting and correcting missing values?",
+    "options": [
+      "Data cleaning.",
+      "Data integration.",
+      "Data reduction.",
+      "Data transformation.",
+      "Data Discretization."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the lecture on Data Wrangling Demo, What does the function count_nulls(df) primarily help analyze?",
+    "options": [
+      "The distribution of missing values across columns and rows.",
+      "The number of unique values in categorical columns.",
+      "The correlation between numeric variables.",
+      "The outliers in a dataset using standard deviation.",
+      "The memory usage of each column in the dataframe."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "Thinking back to the day we discussed hospitals and car thefts, (That is, the more hospitals that a city has, the more car thefts happen) the true reason for the correlation of the two is called what?",
+    "options": [
+      "Confounding Variable",
+      "Encoded Variable",
+      "Compound Variable",
+      "Interconnected Variable",
+      "Combined Variable"
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "A data analyst is working with a dataset containing daily temperature readings from multiple weather stations over the past ten years. The dataset contains fluctuations due to short-term weather variations. To make the data more useful for long-term climate analysis, the analyst decides to reduce these short-term variations while preserving overall trends. According to the data-wrangling-v2 lecture in class, which data transformation method would be most beneficial in this scenario?",
+    "options": [
+      "Smoothing.",
+      "Attribute/feature construction.",
+      "Aggregation.",
+      "Normalization.",
+      "Replacing all data with wild guesses."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the lecture notes on dealing with dirty data, imagine the following situation: A data analyst is working with a large healthcare dataset that contains missing patient ages, inconsistent date formats, and duplicate patient records. The analyst needs to ensure data quality before performing statistical analysis. Which of the following approaches is the most comprehensive method to correct the dirty data?",
+    "options": [
+      "Performing a combined computer and human inspection to identify and resolve missing values, standardize date formats, and remove duplicate records.",
+      "Binning the patient ages into categories (e.g., 0–18, 19–35, 36–60, 61+) to handle missing values.",
+      "Using regression models to predict and fill in missing patient ages based on other attributes like diagnosis and admission date.",
+      "Applying clustering algorithms to group similar patient records and infer missing values based on cluster averages.",
+      "Removing all incomplete and inconsistent records from the dataset to ensure only clean data is used for analysis."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "When handling missing data in a dataset where the variable type is neither categorical nor numerical (e.g., a time-series or mixed data type), which of the following approaches is most appropriate for ensuring the integrity of the dataset before analysis? Assume the missing data pattern is random.",
+    "options": [
+      "Use interpolation methods like linear or spline interpolation to estimate missing values based on surrounding data.",
+      "Replace missing values with the mean or median of the variable, as this works for all data types.",
+      "Delete all rows containing missing values to ensure no bias is introduced.",
+      "Use one-hot encoding to represent missing values as a separate category.",
+      "Randomly assign missing values from a uniform distribution across the variable's range."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to Data Wrangling v2 slide 4, which Data Preprocessing task is applied when a university categorizes student enrollment data by class level (Freshman, Sophomore, Junior, Senior) and then further groups it into Undergraduate and Graduate programs for reporting purposes?",
+    "options": [
+      "Concept Hierarchy Generation.",
+      "Data Compression.",
+      "Data Cleaning.",
+      "Dimensionality Reduction.",
+      "Data Integration."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the lecture on Data Wrangling (Slide 7- 9), what is the primary advantage of leveraging metadata for detecting data discrepancies?",
+    "options": [
+      "Metadata provides structured information that can reveal hidden mismatches or inconsistencies between recorded and actual conditions, thereby enhancing the accuracy of the data.",
+      "Metadata replaces raw data values with statistical averages, ensuring that all discrepancies are removed.",
+      "Metadata automatically corrects all errors in a dataset by comparing values across unrelated sources.",
+      "Metadata eliminates the need for domain experts because it interprets and validates data on its own.",
+      "Metadata relies entirely on user intuition, making it inherently prone to subjective biases."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "Principal Component Analysis (PCA) as a data reduction method minimizes error by:",
+    "options": [
+      "capturing the largest amount of variation in data.",
+      "capturing the smallest amount of variation in data.",
+      "clustering similar data.",
+      "maximizing the number of features in the dataset.",
+      "removing all correlations between variables."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "In terms of numerosity reduction, which of the following methods assumes that the data fits a model, and that only model parameters are stored instead of the actual data?",
+    "options": [
+      "Parametric Method",
+      "Binning",
+      "Sampling",
+      "Histogram",
+      "Clustering"
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the data wrangling discussion, in the context of data cleaning, which of the following is an example of inconsistent data?",
+    "options": [
+      "Missing values in the salary field",
+      "A negative salary value of -$10",
+      "Different rating systems used (1,2,3) vs (A,B,C)",
+      "A blank occupation field",
+      "Duplicate customer records"
+    ],
+    "correct_answer": "C"
+  },
+  {
+    "question": "According to the data-wrangling-v2 lecture, which of the following is a common method for replacing and dealing with NULL values in a dataset?",
+    "options": [
+      "Filling NULL values with statistical measures like mean or median.",
+      "Using interpolation methods to estimate missing values.",
+      "Dropping rows or columns containing NULL values.",
+      "Encoding categorical variables with numerical values.",
+      "Standardizing data using z-scores."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to slide 22 of the data-wrangling-v2 lecture, what is the key difference between data lakes and data warehouses in terms of data structure and implementation speed?",
+    "options": [
+      "Data lakes store data in raw format and offer quicker setup, while data warehouses use structured data with predefined schemas and require significant setup time.",
+      "Data lakes only store unstructured data, while data warehouses can store both structured and unstructured data.",
+      "Data lakes have slower implementation but better data quality, while data warehouses offer quick setup but lower data quality.",
+      "Data lakes require predefined schemas, while data warehouses allow for flexible data storage.",
+      "Data lakes and data warehouses have the same implementation speed but different storage capacities."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "Which data integration approach involves leaving the data at its source and accessing it at query time?",
+    "options": [
+      "Virtual Data Integration",
+      "Data Mining",
+      "Data Warehousing",
+      "Data Lake"
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "A dataset contains salary information recorded in different currencies (e.g., USD, EUR). How would you standardize this data?",
+    "options": [
+      "Convert all salaries into a single currency using an exchange rate table before analysis.",
+      "Normalize salary values between 0 and 1 using Min-Max scaling.",
+      "Remove all salary records that are not in USD for simplicity.",
+      "Group salaries by currency type without converting them."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the lecture on data integration, which of the following is a key challenge when integrating data from multiple sources?",
+    "options": [
+      "Identifying real-world entities from different data sources, such as matching 'Bill Clinton' with 'William Clinton.'",
+      "Ensuring that all data sources use the same programming language for data storage.",
+      "Converting all data into a single file format, such as CSV.",
+      "Using only structured data and ignoring unstructured data sources.",
+      "Ensuring that all data sources are stored in the same physical location."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "Which of the following is an outlier detection method that uses statistical techniques?",
+    "options": [
+      "Interquartile Range (IQR)",
+      "Principal Component Analysis (PCA)",
+      "Data Normalization",
+      "Feature Engineering",
+      "Data Binning"
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "Based on the lectures of data wrangling, which of the following best describes the goal of data transformation in data preprocessing?",
+    "options": [
+      "To convert raw data into a more meaningful and structured format.",
+      "To remove all outliers from a dataset.",
+      "To randomly shuffle data to improve its distribution.",
+      "To merge multiple datasets into a single source.",
+      "To ensure all categorical data is converted into numerical values."
+    ],
+    "correct_answer": "A"
+  },
+    
+  {
+    "question": "According to the data-wrangling-v2 lecture slides, which visual method is most appropriate for helping detect outliers in a dataset?",
+    "options": [
+      "Histograms.",
+      "Line Graphs.",
+      "Box Plots.",
+      "Pie Charts.",
+      "Word Clouds."
+    ],
+    "correct_answer": "C"
+  },
+  {
+    "question": "According to the data-wrangling-v2 lecture slides, which of the following BEST describes the primary purpose of using data cube aggregation in numerosity reduction?",
+    "options": [
+      "To precompute and store multidimensional aggregates for efficient querying, reducing the need to process raw data repeatedly.",
+      "To eliminate outliers by replacing values with aggregated cluster centroids.",
+      "To encrypt sensitive data while maintaining analytical capabilities.",
+      "To merge inconsistent schemas from distributed databases into a unified format.",
+      "To randomly sample subsets of data for faster computation."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to data-wrangling-v2 slide 51, which of the normalization techniques mentioned is most suitable in the following scenario to ensure fair treatment of all features? A machine learning model is being trained on a dataset where the features have significantly different ranges. One feature represents annual income in the range of thousands to millions, while another feature represents age in the range of 18 to 90. The model relies on distance-based calculations, such as k-nearest neighbors (KNN).",
+    "options": [
+      "Min-Max Scaling.",
+      "Z-Score Normalization.",
+      "Decimal Scaling.",
+      "Binarization.",
+      "Multiplying every feature by π for uniformity."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the lecture slides data-wrangling-v2, which of the following BEST describes the concept of 'Independence of Semantic Variations' in the context of data integration?",
+    "options": [
+      "The ability of the system to recognize and reconcile differences in data meanings and usage across systems, such as understanding 'DOB' and 'DateOfBirth' as equivalent terms.",
+      "The ability of the system to access data regardless of its physical storage location.",
+      "The ability of the system to operate with any data structure or syntax, handling databases like SQL or NoSQL.",
+      "The process of physically moving all data into a single data warehouse.",
+      "The use of correlation analysis to identify redundant attributes across different databases."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "You are working with a dataset containing student records, including Student ID, Name, Date of Birth, Enrollment Date, and Graduation Date. After performing an initial data audit, you notice the following entries: Student ID 2 has a Graduation Date (2019-06-15) earlier than the Enrollment Date (2020-09-01). According to the Data Wrangling Lecture Part-1 Slide-6, which record contains noisy data?",
+    "options": [
+      "Bob",
+      "Alice",
+      "Carol",
+      "Dave",
+      "No Issues Found"
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the lecture materials, which method of data cleaning would be MOST appropriate when dealing with a dataset where values are expected to form distinct groups and deviations from these groups are considered errors?",
+    "options": [
+      "Binning with equal-width partitioning.",
+      "Linear regression smoothing.",
+      "Clustering-based smoothing.",
+      "Z-score normalization.",
+      "Chi-square analysis."
+    ],
+    "correct_answer": "C"
+  },
+  {
+    "question": "According to the Data Wrangling Demo, what does the function count_nulls(df) primarily help analyze?",
+    "options": [
+      "The distribution of missing values across columns and rows.",
+      "The number of unique values in categorical columns.",
+      "The correlation between numeric variables.",
+      "The outliers in a dataset using standard deviation.",
+      "The memory usage of each column in the dataframe."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the lecture on Data Wrangling, which of the following is NOT considered a measure of data quality?",
+    "options": [
+      "Latency.",
+      "Accuracy.",
+      "Completeness.",
+      "Consistency.",
+      "Timeliness."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the lecture on data wrangling demo, if null_counts_rows is a Pandas Series containing the number of null values in each row, what does the following command return? null_counts_rows[null_counts_rows == max_nulls]",
+    "options": [
+      "A filtered Series containing only the rows where the null count equals max_nulls.",
+      "A list of row indices where the number of null values is equal to max_nulls.",
+      "A boolean mask indicating which rows have exactly max_nulls null values.",
+      "A count of how many rows contain max_nulls null values.",
+      "A NumPy array of null counts where they equal max_nulls."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the lecture on data wrangling part2 (slide no 21), which of the following best describes the primary difference between data warehousing and virtual data integration?",
+    "options": [
+      "Data warehousing physically consolidates data, whereas virtual integration accesses data in real-time without replication.",
+      "Virtual integration requires all data sources to follow the same schema, while data warehousing does not.",
+      "Data warehousing allows for real-time querying of distributed data, while virtual integration requires batch processing.",
+      "Data warehousing is only suitable for structured data, while virtual integration supports both structured and unstructured data.",
+      "Virtual integration stores data permanently, while data warehousing deletes data after each query."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "Based on the binning methods for data smoothing shown in the image (slide 13), which of the following scenarios best illustrates the purpose of smoothing by bin boundaries?",
+    "options": [
+      "A store wants to group product prices into equal-sized intervals for a promotional discount.",
+      "A researcher replaces each data point in a bin with the mean of the bin to reduce noise in a dataset.",
+      "A data analyst ensures that all values in a bin are replaced by the nearest boundary values to maintain consistency.",
+      "A teacher assigns students to different reading levels based on their test scores without modifying the original scores.",
+      "A pet adoption agency adjusts their records so that all recorded pet ages are rounded to the nearest whole number."
+    ],
+    "correct_answer": "C"
+  },
+  {
+    "question": "According to the lecture on Data Wrangling, which of the following is NOT a measure of Data Quality?",
+    "options": [
+      "Latency",
+      "Accuracy",
+      "Completeness",
+      "Consistency",
+      "Timeliness"
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the lecture on Data Wrangling, which of the following techniques is commonly used for handling missing data during data cleaning?",
+    "options": [
+      "Imputing missing values using statistical methods like mean or median.",
+      "Removing all records that contain missing values.",
+      "Replacing missing values with a random number.",
+      "Leaving missing values as they are to preserve raw data.",
+      "Duplicating existing records to compensate for missing data."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to data-wrangling-v2.pdf slide 11, which of the following methods identifies outliers by measuring how many standard deviations a data point is from the mean?",
+    "options": [
+      "Z-Score",
+      "Interquartile Range (IQR)",
+      "Box Plot",
+      "DBSCAN"
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the Data Wrangling lecture, which of the following best describes numerosity reduction in data preprocessing?",
+    "options": [
+      "Reducing data volume by using alternative, smaller representations without losing analytical results.",
+      "Eliminating missing values by imputing mean or median values.",
+      "Scaling numerical attributes to a common range for consistency.",
+      "Removing unimportant attributes to reduce dataset complexity.",
+      "Aggregating multiple datasets into a single unified schema."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to slide 11 from the lecture on data wrangling, which of the following is NOT a typical technique for detecting outliers?",
+    "options": [
+      "Binning",
+      "Make a box plot",
+      "Z-scores",
+      "IQR",
+      "Make a scatterplot"
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "Which of the following is NOT a problem that can occur during data wrangling?",
+    "options": [
+      "Data inconsistency",
+      "Data duplication",
+      "Data loss",
+      "Data bias",
+      "Decreased performance of the data analysis model"
+    ],
+    "correct_answer": "E"
+  },
+  {
+    "question": "According to the chapter 8 - Cluster Analysis, what is the key challenge when using clustering for data wrangling?",
+    "options": [
+      "Choosing the right number of clusters",
+      "Ensuring that every data point is assigned to a cluster, even if it does not naturally fit into any group.",
+      "Using clustering to remove all noise from the dataset, guaranteeing a clean dataset.",
+      "Applying clustering in a way that keeps the data distribution exactly the same while also smoothing fluctuations."
+    ],
+    "correct_answer": "A"
+  },
+    
+  {
+    "question": "According to the lecture on data wrangling, what will be the output of the following code used for binning data?",
+    "code": "import pandas as pd\ndata = pd.Series([5, 15, 25, 35, 45])\nbins = [0, 10, 20, 30, 40, 50]\nlabels = ['A', 'B', 'C', 'D', 'E']\ncategorized = pd.cut(data, bins=bins, labels=labels)\nprint(categorized)",
+    "options": [
+      "[A, B, C, D, E]",
+      "[NaN, A, B, C, D]",
+      "[A, B, C, D, NaN]",
+      "[A, A, B, C, D]"
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the Data Wrangling Part 1 Lecture slide 14, which factor is considered most critical when applying data smoothing via linear regression or more complex models for imputation?",
+    "options": [
+      "Formulating a strong hypothesis about the relationship between the input data and the auxiliary variable(s).",
+      "Verifying that the input data adheres to the normality assumptions required by the model.",
+      "Relying on comprehensive exploratory analysis to determine variable relationships after data collection.",
+      "Selecting a model primarily based on its ability to capture non-linear trends irrespective of prior assumptions.",
+      "Ensuring that the chosen imputation model has been validated on similar historical datasets."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the Data Wrangling slide 'data-wrangling-v2.pdf' lecture, pages 37-40, why is parametric numerosity reduction often preferred over non-parametric methods in data mining?",
+    "options": [
+      "It stores model parameters instead of raw data, reducing storage and computation.",
+      "It removes all unnecessary data without making assumptions.",
+      "It clusters data based on similarity for better accuracy.",
+      "It dynamically adjusts models without retraining.",
+      "It compresses raw data instead of approximating it."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the lecture on data mining principles, which of the following is NOT a data reduction strategy?",
+    "options": [
+      "Data migration",
+      "Dimensionality reduction",
+      "Numerosity reduction",
+      "Data compression",
+      "Feature selection"
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to lecture slides on data wrangling (Slide 50), which data transformation technique is primarily used to prepare continuous numerical data for categorical analysis?",
+    "options": [
+      "Discretization",
+      "Smoothing",
+      "Normalization",
+      "Aggregation",
+      "Feature Construction"
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the lecture on data preprocessing, what is the primary purpose of data discretization?",
+    "options": [
+      "To transform continuous data into categorical bins.",
+      "To normalize data by scaling values between 0 and 1.",
+      "To eliminate missing values from a dataset.",
+      "To combine data from multiple sources into a unified format.",
+      "To randomly sample data for efficient storage."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "In which scenario would stratified sampling be the more appropriate choice over simple random sampling?",
+    "options": [
+      "When ensuring that specific subgroups in a population are proportionally represented in the sample.",
+      "When selecting a sample from a homogeneous population where all members have similar characteristics.",
+      "When selecting a sample in which each individual has an equal probability of being chosen, without considering subgroups.",
+      "When performing sampling without replacement to ensure no individual is selected more than once.",
+      "When every individual in the population has an equal chance of being selected, but some individuals may appear multiple times due to sampling with replacement."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the Data Wrangling lecture slides, which method is commonly used for detecting outliers in numerical data?",
+    "options": [
+      "Interquartile Range (IQR) and Z-Score.",
+      "Chi-Square Test.",
+      "Principal Component Analysis (PCA).",
+      "Data Normalization."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the Data Wrangling lecture slides (Slide 22), what is an advantage of using a data lake over a traditional data warehouse?",
+    "options": [
+      "Data lakes store data in raw form, allowing flexible analysis.",
+      "Data lakes require predefined schemas before storing data.",
+      "Data warehouses are faster than data lakes for all types of queries.",
+      "Data lakes store only structured data."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to Data Wrangling lecture slides (Slide 32), what is the curse of dimensionality, and how does it impact machine learning models?",
+    "options": [
+      "As the number of dimensions increases, data points become more sparse, making clustering and distance-based models less meaningful.",
+      "More dimensions always improve model accuracy by providing additional features for learning.",
+      "The curse of dimensionality is when datasets become too large to fit into memory, causing slow computations.",
+      "Increasing the number of dimensions makes feature selection unnecessary since all features contribute equally.",
+      "The curse of dimensionality only affects text-based datasets, not numerical or categorical data."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to Data Wrangling Lecture, what is the purpose of normalization in data preprocessing?",
+    "options": [
+      "To scale data values into a common range for analysis.",
+      "To remove all missing values from the dataset.",
+      "To randomly modify data values for security purposes.",
+      "To increase the number of duplicate records."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the lecture data-wrangling-v2.pdf lecture, pages 33-34, how does Principal Component Analysis (PCA) help with data reduction?",
+    "options": [
+      "It transforms high-dimensional data into a lower-dimensional space while retaining variance.",
+      "It removes all missing values from a dataset.",
+      "It eliminates all outliers.",
+      "It duplicates all data points for backup.",
+      "It changes numerical data into categorical data."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the data wrangling lecture (02/10/2025 by Dr. Christan Grant, pdf:data-wrangling-part1.pdf, slide# 13), which of the following statements best describes the method of binning for data smoothing?",
+    "options": [
+      "It involves partitioning sorted data into equal-frequency or equal-width bins and then smoothing by bin means or boundaries.",
+      "It uses regression models to predict and replace noisy data values based on the relationship with auxiliary variables.",
+      "It applies clustering algorithms to group similar data points and uses cluster centroids to represent and smooth data.",
+      "It identifies outliers by calculating the Interquartile Range (IQR) and removing data points that fall outside 1.5 times the IQR from the quartiles.",
+      "It transforms data by scaling values to fall within a smaller, specified range, such as 0.0 to 1.0."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the lecture on data preprocessing, which of the following is NOT mentioned as a major task?",
+    "options": [
+      "Data encryption.",
+      "Data cleaning.",
+      "Data integration.",
+      "Data reduction.",
+      "Data transformation and discretization."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the Data Wrangler V2 Lecture slide 32, what is the primary purpose of using dimensionality reduction in data preprocessing?",
+    "options": [
+      "To reduce computational complexity and improve data processing efficiency while retaining important information.",
+      "To expand the dataset by adding more features for analysis and interpretation.",
+      "To enhance the dataset by generating new synthetic features and variables.",
+      "To optimize the dataset for better visual appeal and clarity in graphical representations.",
+      "To combine multiple datasets into a single unified source for easier analysis."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the lecture on the data wrangling part 1, what data quality issue would best describe an 'Hourly Wage' field that has -12 as a value?",
+    "options": [
+      "Noisy.",
+      "Inconsistent.",
+      "Intentional.",
+      "Incomplete.",
+      "Intact."
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "You are working with a dataset containing customer information, and you notice that the 'Date of Birth' field has inconsistent formats (some 'YYYY-MM-DD', others 'MM/DD/YYYY') and missing values. Which of the following is the MOST appropriate first step to address this issue?",
+    "options": [
+      "Impute missing values with the mean date and leave inconsistent formats as they are.",
+      "Standardize all date formats to a single format and then address missing values.",
+      "Delete all records with missing or inconsistent date formats.",
+      "Convert all date formats to Unix timestamps without addressing missing values."
+    ],
+    "correct_answer": "B"
+  },
+  {
+    "question": "According to data-wrangling-v2.pdf slide 31, which of the following is a technique used for dimensionality reduction?",
+    "options": [
+      "Wavelet transforms",
+      "Chi-square test",
+      "Increasing the number of attributes",
+      "Expanding the feature space",
+      "Optimistic value prediction"
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "question": "According to the data-wrangling lecture, which of the following best describes the process of data cleaning?",
+    "options": [
+      "It is an iterative process involving discrepancy detection using metadata and rules, outlier detection, and data correction through methods like binning, regression, and clustering, with continuous improvement and feedback integration.",
+      "It is a one-time process that only involves removing duplicate records from a dataset.",
+      "It is solely focused on correcting spelling errors in textual data.",
+      "It is a process that only requires automated algorithms without any human intervention.",
+      "It is a process that only deals with missing values and does not address other data quality issues."
+    ],
+    "correct_answer": "A"
+  }
+]
+
+
+}
+  
